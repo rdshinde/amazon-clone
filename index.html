@@ -26,7 +26,12 @@
       crossorigin="anonymous"
     />
     <!-- Firebase Config -->
-    
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js"></script>
+
+    <!-- External Javascript -->
+    <script type="module" src="./firebase.js"></script>
+    <script src="./script.js"></script>
       
     
     <!-- Title -->
@@ -687,7 +692,7 @@
         </div>
       </div>
     </div>
-    <script type="module">
+    <!-- <script type="module">
       // Import the functions you need from the SDKs you need
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
       import { getFirestore } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
@@ -707,9 +712,8 @@
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
       var db = getFirestore(app);
-
-    </script>
-      <!-- External Javascript -->
-    <script src="./script.js"></script>
+     
+    </script> -->
+    
   </body>
 </html>
