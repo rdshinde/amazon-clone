@@ -1,13 +1,12 @@
-// import { appendFile } from "fs";
 import {
   collection,
   addDoc,
   getDocs,
+  doc,
+  updateDoc,
 } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
 
 import { db } from "./firebase.js";
-
-// import { collection, getDocs } from "firebase/firestore";
 
 const querySnapshot = await getDocs(collection(db, "items"));
 
@@ -21,16 +20,19 @@ querySnapshot.forEach((doc) => {
     rating: doc.data().rating,
     price: doc.data().price,
   });
-  // console.log(`${doc.id} => ${doc.data()}`);
 });
 generateItems(items);
-// console.log(items);
+
+// Function for handling add to cart click event
+function addToCart(item) {
+  addItems(item);
+}
 
 function generateItems(items) {
   let itemsHTML = "";
   items.forEach((item) => {
     let doc = document.createElement("div");
-    doc.classList.add("main-product","m-5");
+    doc.classList.add("main-product", "m-5");
     doc.innerHTML = `
     <div class="product-image w-48 h-52 bg-white rounded-lg p-4">
                       <!-- image -->
@@ -48,25 +50,45 @@ function generateItems(items) {
                   <div class="product-price font-bold text-gray-700 text-lg">
                     ₹ ${item.price}
                   </div>
-                  <!-- Add to cart button -->
-                  <div class="add-to-cart h-8 w-28 bg-yellow-500 flex items-center justify-center rounded cursor-pointer text-md hover:bg-yellow-600 mt-1 text-white">Add to Cart</div>
-    `
+                  
+    `;
+    // Creating Add to Cart Child Element for item
     let addToCartEl = document.createElement("div");
-    addToCartEl.classList.add("add-to-cart","h-8","w-28","bg-yellow-500","flex","items-center","justify-center","rounded","cursor-pointer",)
-
+    addToCartEl.classList.add(
+      "add-to-cart",
+      "h-8",
+      "w-28",
+      "bg-yellow-500",
+      "flex",
+      "items-center",
+      "justify-center",
+      "rounded",
+      "cursor-pointer",
+      "text-md",
+      "hover:bg-yellow-600",
+      "mt-1",
+      "text-white"
+    );
+    addToCartEl.innerText = "Add to Cart";
+    // Add to cart 'click' Event listener
+    addToCartEl.addEventListener("click", function () {
+      addToCart(item);
+    });
+    // Adding add to cart div to parent div
+    doc.appendChild(addToCartEl);
+    document.querySelector(".main-section-products").appendChild(doc);
   });
-  document.querySelector(".main-section-products").innerHTML = itemsHTML;
-
 }
-
-// function addItems(){
-//   const docRef =  addDoc(collection(db, "items"), {
-//     image: "Ada",
-//     name: "Lovelace",
-//     price: 1815,
-//     rating:5,
-//     make:"appendFile"
-//   });
-//   console.log("Document written with ID: ", docRef.id);
-// }
-// addItems();
+// Function to add items to cart-items in database
+function addItems(item) {
+  const docRef = collection(db, "cart-items");
+  docRef.addDoc(),
+    {
+      image: item.image,
+      make: item.make,
+      name: item.name,
+      rating: item.rating,
+      price: item.price,
+      quantity: 1,
+    };
+}
