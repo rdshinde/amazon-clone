@@ -56,8 +56,7 @@ function deleteItem(itemID){
 function generateCartItems(cartItems){
     let itemsHTML = "";
     cartItems.forEach((cartItem)=>{
-        itemsHTML += `
-            <div
+        itemsHTML += `<div
               class="cart-item flex items-center pb-4 border-b border-gray-100"
             >
               <div
@@ -140,8 +139,8 @@ function generateCartItems(cartItems){
                 <!-- delete item -->
                 <i class="fa fa-times" aria-hidden="true"></i>
               </div>
-            </div>
-        `
+            </div>`
+        
     })
     document.querySelector(".cart-items").innerHTML = itemsHTML;
     createEventListeners();
