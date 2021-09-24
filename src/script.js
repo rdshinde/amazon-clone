@@ -1,42 +1,23 @@
 
-import {
-  collection,
-  addDoc,
-  getDocs,
-  doc,
-  updateDoc,
-  getDoc,
-  increment
-} from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
 
-import { db } from "./firebase.js";
-
-
-
-const querySnapshot = await getDocs(collection(db, "items"));
-
-let items = [];
-querySnapshot.forEach((doc) => {
-  items.push({
-    id: doc.id,
-    image: doc.data().image,
-    name: doc.data().name,
-    make: doc.data().make,
-    rating: doc.data().rating,
-    price: doc.data().price,
-  });
-  
-});
-generateItems(items);
-
-
-// Function for handling add to cart click event 
-function addToCart(item){
-  
-  addItems(item);
-
+function getItems(){
+  db.collection("items").get().then((querySnapshot)=>{
+    let items = [];
+    querySnapshot.forEach((doc) => {
+      items.push({
+      id: doc.id,
+      image: doc.data().image,
+      name: doc.data().name,
+      make: doc.data().make,
+      rating: doc.data().rating,
+      price: doc.data().price,
+      })
+    });
+    generateItems(items);
+  })
 }
 
+getItems();
 
 function generateItems(items) {
   let itemsHTML = "";
@@ -79,31 +60,25 @@ function generateItems(items) {
 
 }
 // Function to add items to cart-items in database
-function addItems(item){
-  updateCart(item);
-  
-}
-
-function updateCart(item){
-  let cartItem = doc(db, "cart-items", item.id);
-  const docSnap = getDoc(cartItem);
-  console.log(docSnap.exists());
-    if(docSnap.exists()){
-      updateDoc(cartItem, {
-        quantity: increment(1)
-      });
-      console.log("Updated")
+function addToCart(item){
+  let cartItem = db.collection("cart-items").doc(item.id);
+  cartItem.get()
+  .then(function(doc){
+    if(doc.exists){
+      cartItem.update({
+        quantity:doc.data().quantity + 1
+      })
     }
     else{
-      // const docRef =  addDoc(collection(db, "cart-items"), {
-      //   id:item.id,
-      //   image: item.image,
-      //   make: item.make,
-      //   name: item.name,
-      //   rating:item.rating,
-      //   price:item.price,
-      //   quantity:1
-      // });
-      console.log("else");
+      cartItem.set({
+        image:item.image,
+        name:item.name,
+        make:item.make,
+        rating:item.rating,
+        price:item.price,
+        quantity:1
+      })
     }
+  })
+  
 }

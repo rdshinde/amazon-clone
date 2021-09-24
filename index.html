@@ -26,11 +26,16 @@
       crossorigin="anonymous"
     />
     <!-- Firebase Config -->
-    <!-- <script type="module" src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+
     <!-- External Javascript -->
-    <script type="module" src="./firebase.js"></script>
-    <script type="module" src="./script.js"></script>
+    <script src="./src/firebase.js"></script>
+    <script  src="./src/script.js"></script>
+    <script src="./src/header.js"></script>
+    <script src="./src/cart.js"></script>
     
       
     
@@ -181,7 +186,7 @@
             "
           >
           <!-- Cart item number Div -->
-          <a href="cart.html"><div class="cart-item-number absolute -top-1 -right-1 h-4 w-4 bg-yellow-500 rounded-full flex items-center justify-center text-white text-xs ">2</div>
+          <a href="cart.html"><div class="cart-item-number absolute -top-1 -right-1 h-4 w-4 bg-yellow-500 rounded-full flex items-center justify-center text-white text-xs "></div>
           
             <!-- Cart SVG -->
             <svg
@@ -322,7 +327,7 @@
           </div>
         </div>
         <!-- Main shopping div -->
-        <div class="shoping-section flex-1 p-6 bg-gray-100">
+        <div class="shoping-section h-vh flex-1 p-6 bg-gray-100">
           <div class="main-banner h-44 rounded-lg flex items-end">
             <div
               class="
@@ -366,13 +371,14 @@
               </svg>
             </h1>
             <!-- Categories SVG -->
-            <div class="categories-icon mt-10 flex">
+            <div class="categories-icon mt-10 flex flex-wrap">
               <div
                 class="
                   icon-desktop
                   h-20
                   w-20
                   flex
+                  mt-5
                   items-center
                   bg-white
                   justify-center
@@ -401,6 +407,7 @@
                   h-20
                   w-20
                   flex
+                  mt-5
                   items-center
                   bg-white
                   justify-center
@@ -429,6 +436,7 @@
                   h-20
                   w-20
                   flex
+                  mt-5
                   items-center
                   bg-white
                   justify-center
@@ -457,6 +465,7 @@
                   h-20
                   w-20
                   flex
+                  mt-5
                   items-center
                   bg-white
                   justify-center
@@ -485,6 +494,7 @@
                   h-20
                   w-20
                   flex
+                  mt-5
                   items-center
                   bg-white
                   justify-center
@@ -519,6 +529,7 @@
                   h-20
                   w-20
                   flex
+                  mt-5
                   items-center
                   bg-white
                   justify-center
@@ -547,6 +558,7 @@
                   h-20
                   w-20
                   flex
+                  mt-5
                   items-center
                   bg-white
                   justify-center
@@ -575,6 +587,7 @@
                   h-20
                   w-20
                   flex
+                  mt-5
                   items-center
                   bg-white
                   justify-center
@@ -612,7 +625,7 @@
           >
             Hot Deals 🔥 
           </h1>
-          <div class="main-section-products flex">
+          <div class="main-section-products flex flex-wrap">
               
           </div>
           </div>
