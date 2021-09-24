@@ -80,6 +80,11 @@ function generateItems(items) {
 }
 // Function to add items to cart-items in database
 function addItems(item){
+  updateCart(item);
+  
+}
+
+function updateCart(item){
   let cartItem = doc(db, "cart-items", item.id);
   const docSnap = getDoc(cartItem);
   console.log(docSnap.exists());
@@ -101,6 +106,4 @@ function addItems(item){
       // });
       console.log("else");
     }
-  
 }
-
