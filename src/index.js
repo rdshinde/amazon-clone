@@ -3,6 +3,11 @@ const dropdownArrow = document.querySelector(".category-dropdown-arrow");
 const dropDownList = document.querySelector(".category-dropdown");
 const overlayDiv = document.querySelector(".overlay");
 
+function onloadHandler(){
+    dropDownList.classList.add("hidden");
+    overlayDiv.classList.add("hidden");
+}
+window.onload = onloadHandler;
 
 dropdownArrow.addEventListener("click",function(){
     if(dropDownList.classList.contains("hidden")){
@@ -25,3 +30,4 @@ overlayDiv.addEventListener("click",function(){
         overlayDiv.classList.add("hidden");
     }
 })
+
