@@ -18,7 +18,7 @@ function getTotalCost(cartItems){
     cartItems.forEach((cartItem)=>{
         totalCost += cartItem.price * cartItem.quantity
     })
-    document.querySelector(".total-cost-number").innerText = totalCost;
+    document.querySelector(".total-cost-number").innerText = "₹ "+totalCost;
 
 }
 
