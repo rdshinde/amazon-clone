@@ -36,6 +36,7 @@
     <script  src="./src/script.js"></script>
     <script src="./src/header.js"></script>
     <script src="./src/cart.js"></script>
+   
     
       
     
@@ -80,7 +81,9 @@
         />
         <!-- Categories Search -->
         <div
+        
           class="
+            relative
             categories
             h-9
             w-30
@@ -93,10 +96,12 @@
             text-yellow-600
           "
         >
+        <button class="overlay fixed inset-0 h-full w-full  cursor-default bg-gray-50 bg-opacity-25"></button>
           Categories
           <!-- Categories downword arraow icon SVG-->
           <svg
-            class="h-4 w-4 ml-2"
+          
+            class="category-dropdown-arrow h-4 w-4 ml-2 cursor-pointer relative z-10 "
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
             fill="none"
@@ -109,8 +114,45 @@
               stroke-width="2"
               d="M19 9l-7 7-7-7"
             />
+            
           </svg>
+          
+          <div tabindex="-1" class="category-dropdown absolute shadow-2xl  p-2 -mt-3 -ml-3 top-12 w-30 h-100 justify-center bg-yellow-100 rounded-br-xl rounded-bl-xl border-yellow-500
+          ">
+          
+            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">
+              <span class="w-8"></span>
+              <span>Echo and Alexa</span>
+            </div>
+            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">
+              <span class="w-8"></span>
+              <span>Kindle</span>
+            </div>
+            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">
+              <span class="w-8"></span>
+              <span>Electronics</span>
+            </div>
+            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">
+              <span class="w-8"></span>
+              <span>Books</span>
+            </div>
+            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">
+              <span class="w-8"></span>
+              <span>Grossary</span>
+            </div>
+            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">
+              <span class="w-8"></span>
+              <span>Home and Garden </span>
+            </div>
+            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg mb-3">
+              <span class="w-8"></span>
+              <span>Fashion</span>
+            </div>
+            
         </div>
+          </div>
+          
+        
         <!-- Search Icon -->
         <div
           class="
@@ -632,5 +674,6 @@
         </div>
       </div>
     </div>
+    <script src="./src/index.js"></script>
   </body>
 </html>
