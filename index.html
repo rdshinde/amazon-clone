@@ -32,10 +32,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
 
     <!-- External Javascript -->
-    <script src="./src/firebase.js"></script>
-    <script  src="./src/script.js"></script>
-    <script src="./src/header.js"></script>
-    <script src="./src/cart.js"></script>
+    
    
     
       
@@ -63,6 +60,7 @@
         <!-- Input Search -->
         <input
           class="
+            search-item
             h-9
             w-30
             bg-yellow-100
@@ -267,7 +265,7 @@
           <svg class="h-12 w-12 rounded-full border-2 border-white overflow-hidden" data-jdenticon-value="rishikesh"></svg>
         </div>
       </div>
-      <div class="main-h-screen flex min-h-screen w-full">
+      <div class="main-h-screen flex min-w-screen w-full">
         <!-- Sidebar Div -->
         <div
           class="
@@ -654,6 +652,24 @@
               </div>
             </div>
           </div>
+          <!-- Search Result Div-->
+          <div class="search-result mt-10">
+            <h1
+            class="
+              search-result-name
+              font-bold
+              text-yellow-900 text-2xl
+              flex
+              items-center
+              hidden
+            "
+          >
+          Search Results 🔍
+          </h1>
+            <div class="search-items flex flex-wrap">
+              
+            </div>
+          </div>
           <!-- Main Deals (Hot Deals) -->
           <div class="main-deals mt-10">
             <h1
@@ -674,6 +690,10 @@
         </div>
       </div>
     </div>
+    <script src="./src/firebase.js"></script>
+    <script  src="./src/script.js"></script>
+    <script src="./src/header.js"></script>
+    <script src="./src/cart.js"></script>
     <script src="./src/index.js"></script>
   </body>
 </html>
