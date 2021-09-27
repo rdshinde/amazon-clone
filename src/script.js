@@ -80,13 +80,15 @@ function generateWishlistItems(items) {
       "w-6",
       "top-1",
       "right-1",
-      "text-yellow-500",
+      "text-gray-200",
       "cursor-pointer",
       "hover:text-yellow-600"
     );
     addToWishlistEl.innerHTML = `<i class="fa fa-trash" aria-hidden="true"></i>`;
     addToWishlistEl.addEventListener("click", function () {
       // addToWishlist(item);
+      addToCartEl.classList.toggle("text-gery-200");
+      addToCartEl.classList.add("text-yellow-500");
       deleteWishlistItem(item.id);
     });
     // Creating Add to Cart Child Element for item
@@ -158,7 +160,7 @@ function generateSearchItems(searchItems) {
       "w-6",
       "top-1",
       "right-1",
-      "text-yellow-500",
+      "text-gray-200",
       "cursor-pointer",
       "hover:text-yellow-600"
     );
@@ -265,7 +267,7 @@ function generateItems(items) {
       "w-6",
       "top-1",
       "right-1",
-      "text-yellow-500",
+      "text-gray-200",
       "cursor-pointer",
       "hover:text-yellow-600"
     );

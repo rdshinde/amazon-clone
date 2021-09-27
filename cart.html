@@ -44,7 +44,7 @@
     <!-- Whole body container -->
     <div class="bg-white w-full">
       <!-- Header Div -->
-      <div class="header h-16 bg-yellow-200 flex items-center">
+      <div class="header h-16 bg-yellow-200 flex items-center sticky top-0 z-50">
         <!-- Logo Div -->
         <div class="logo w-1/5 h-16 ml-10 pt-1">
           <a href="index.html">
@@ -59,6 +59,7 @@
         <!-- Input Search -->
         <input
           class="
+            search-item
             h-9
             w-30
             bg-yellow-100
@@ -153,6 +154,7 @@
         <div
           class="
             search-icon
+            cursor-pointer
             bg-yellow-500
             h-9
             w-10
@@ -182,6 +184,7 @@
         </div>
         <div
           class="
+            cursor-pointer
             icons
             text-yellow-600
             flex
@@ -196,9 +199,8 @@
         >
           <!-- Wishlist icon -->
           <svg
-            class="h-4 w-4"
+            class="wishlist h-4 w-4 cursor-pointer"
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -213,6 +215,7 @@
           <!-- Cart Icon Div -->
           <div
             class="
+            
               cart-icon
               h-10
               w-10
@@ -367,7 +370,19 @@
           </div>
         </div>
         <!-- Main shopping div -->
-        <div class="shoping-section flex-1 p-6 bg-white">
+        <div class="shoping-section flex-1 p-6 bg-white relative">
+          <div class="wishlist-showcase absolute w-full h-full bg-gray-200 z-10 top-0 left-0 hidden">
+            <h1 class="
+            font-bold
+            text-yellow-900 text-2xl
+            flex
+            items-center
+            p-5
+          ">Items In Your Wishlist ♥️ </h1>
+            <div class="wishlist-items flex flex-wrap mt-10">
+              <!-- Wishlist Items will come here -->
+            </div>
+          </div>
           <!-- Shopping Cart Heading -->
           <h1 class="font-bold text-gray-400 text-3xl mb-6">Shopping Cart</h1>
           <div class="table-titles flex font-bold text-gray-400">
@@ -380,7 +395,7 @@
           
           <!-- Cart Items two -->
           <div class="cart-items">
-            
+            <!-- Cart items goes here -->
           </div>
           <div class="complete-order flex justify-end mt-10">
             <div class="total-cost mr-7">
@@ -407,9 +422,34 @@
               Complete Order
             </div>
           </div>
+          <div class="searched-items flex flex-wrap mt-20 ml-5">
+            <!-- Search Result Div-->
+        <div class="search-result mt-5">
+          <h1
+          class="
+            search-result-name
+            font-bold
+            text-yellow-900 text-2xl
+            flex
+            items-center
+            hidden
+          "
+        >
+        Search Results 🔍
+        </h1>
+          <div class="search-items flex flex-wrap mt-5">
+            
+          </div>
         </div>
+        </div>
+        </div>
+        
       </div>
+      
     </div>
+    
+
     <script src="./src/index.js"></script>
+    <script src="./src/script.js"></script>
   </body>
 </html>
