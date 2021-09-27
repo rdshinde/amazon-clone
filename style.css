@@ -12,3 +12,35 @@
 .hidden{
     display: none;
 }
+
+.add-to-cart{
+    position: relative;
+}
+.add-to-cart:active{
+    
+}
+.button-loading{
+    
+}
+.button-loading::after{
+    content:"";
+    position: absolute;
+    width: 20px;
+    top:5px;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    margin: auto;
+    border: 3px solid transparent;
+    border-top-color:#ffffff ;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+}
+@keyframes button-loading-spinner{
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}

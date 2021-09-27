@@ -16,13 +16,13 @@ function getSearchItems(searchValue) {
         searchItemsDiv.innerHTML = "";
         generateSearchItems(searchItems);
       } 
-      else {
-        searchItemsDiv.innerText = `
+      // else{
+      //   searchItemsDiv.innerText = `
         
-          Items not Found for search "${searchValue}" 😔.
+      //     Items not Found for search "${searchValue}" 😔.
           
-        `;
-      }
+      //   `;
+      // }
     });
   });
 }
@@ -148,6 +148,12 @@ function generateItems(items) {
     // Add to cart 'click' Event listener
     addToCartEl.addEventListener("click", function () {
       addToCart(item);
+      addToCartEl.innerText = "";
+      addToCartEl.classList.add("button-loading");
+      setTimeout(function(){
+        addToCartEl.innerText = "Add to Cart";
+        addToCartEl.classList.remove("button-loading");
+      },2000);
     });
     // Adding add to cart div to parent div
     doc.appendChild(addToCartEl);
@@ -175,3 +181,4 @@ function addToCart(item) {
     }
   });
 }
+
