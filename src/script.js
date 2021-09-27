@@ -8,14 +8,15 @@ function getSearchItems(searchValue) {
       if (
         doc.data().name.toLowerCase().includes(searchValue.toLowerCase()) ||
         doc.data().make.toLowerCase().includes(searchValue.toLowerCase())
-      ) {
+      ){
         searchItems.push({
           id: doc.id,
           ...doc.data(),
         });
         searchItemsDiv.innerHTML = "";
         generateSearchItems(searchItems);
-      } else {
+      } 
+      else {
         searchItemsDiv.innerText = `
         
           Items not Found for search "${searchValue}" 😔.
