@@ -5,7 +5,7 @@ function getCartItems(){
             cartItems.push({
                 id:doc.id,
                 ...doc.data()
-            })
+            });
         })
         generateCartItems(cartItems);
         getTotalCost(cartItems);

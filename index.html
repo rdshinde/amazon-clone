@@ -45,7 +45,7 @@
     <!-- Whole body container -->
     <div class="bg-white w-full min-w-screen">
       <!-- Header Div -->
-      <div class="header h-16 bg-yellow-200 flex items-center sticky top-0 z-10">
+      <div class="header h-16 bg-yellow-200 flex items-center sticky top-0 z-50">
         <!-- Logo Div -->
         <div class="logo w-1/5 h-16 ml-10 pt-1">
           <a href="index.html">
@@ -200,7 +200,7 @@
         >
           <!-- Wishlist icon -->
           <svg
-            class="h-4 w-4 cursor-pointer"
+            class="wishlist h-4 w-4 cursor-pointer"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -371,7 +371,19 @@
           </div>
         </div>
         <!-- Main shopping div -->
-        <div class="shoping-section main-h-screen flex-1 p-6 bg-gray-100 ">
+        <div class="shoping-section main-h-screen flex-1 p-6 bg-gray-100 relative ">
+          <div class="wishlist-showcase absolute w-full h-full bg-gray-200 z-10 top-0 left-0 hidden">
+            <h1 class="
+            font-bold
+            text-yellow-900 text-2xl
+            flex
+            items-center
+            p-5
+          ">Items In Your Wishlist ♥️ </h1>
+            <div class="wishlist-items flex flex-wrap mt-10">
+              <!-- Wishlist Items will come here -->
+            </div>
+          </div>
           <div class="main-banner h-44 rounded-lg flex items-end">
             <div
               class="
