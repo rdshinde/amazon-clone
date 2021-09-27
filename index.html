@@ -200,9 +200,8 @@
         >
           <!-- Wishlist icon -->
           <svg
-            class="h-4 w-4"
+            class="h-4 w-4 cursor-pointer"
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -269,6 +268,7 @@
           <svg class="h-12 w-12 rounded-full border-2 border-white overflow-hidden" data-jdenticon-value="rishikesh"></svg>
         </div>
       </div>
+      <!-- Main Section -->
       <div class="main-h-screen flex min-w-screen w-full">
         <!-- Sidebar Div -->
         <div
@@ -371,7 +371,10 @@
           </div>
         </div>
         <!-- Main shopping div -->
-        <div class="shoping-section h-vh flex-1 p-6 bg-gray-100 ">
+        <div class="shoping-section main-h-screen flex-1 p-6 bg-gray-100 relative">
+          <div class="wishlist-items-showcase absolute bg-red">
+            hello
+          </div>
           <div class="main-banner h-44 rounded-lg flex items-end">
             <div
               class="
@@ -694,6 +697,7 @@
         </div>
       </div>
     </div>
+    
     <script src="./src/firebase.js"></script>
     <script  src="./src/script.js"></script>
     <script src="./src/header.js"></script>

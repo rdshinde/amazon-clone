@@ -16,7 +16,8 @@ function getSearchItems(searchValue) {
         searchItemsDiv.innerHTML = "";
         generateSearchItems(searchItems);
       }
-      // else{
+      // if(!doc.data().name.toLowerCase().includes(searchValue.toLowerCase()) ||
+      //   doc.data().make.toLowerCase().includes(searchValue.toLowerCase())){
       //   searchItemsDiv.innerText = `
 
       //     Items not Found for search "${searchValue}" 😔.
@@ -31,7 +32,7 @@ function generateSearchItems(searchItems) {
   let itemsHTML = "";
   searchItems.forEach((searchItem) => {
     let doc = document.createElement("div");
-    doc.classList.add("main-product", "m-5");
+    doc.classList.add("main-product", "m-5", "relative");
     doc.innerHTML = `
     <div class="product-image w-48 h-52 bg-white rounded-lg p-4">
                       <!-- image -->
@@ -51,6 +52,23 @@ function generateSearchItems(searchItems) {
                   </div>
                   
     `;
+    // Creating wishlist child element for item
+    let addToWishlistEl = document.createElement("div");
+    addToWishlistEl.classList.add(
+      "wishlist-icon",
+      "absolute",
+      "h-6",
+      "w-6",
+      "top-1",
+      "right-1",
+      "text-yellow-500",
+      "cursor-pointer",
+      "hover:text-yellow-600"
+    );
+    addToWishlistEl.innerHTML = `<i class="fa fa-heart" aria-hidden="true"></i>`;
+    addToWishlistEl.addEventListener("click", function () {
+      addToWishlist(searchItem);
+    });
     // Creating Add to Cart Child Element for searchItem
     let addToCartEl = document.createElement("div");
     addToCartEl.classList.add(
@@ -75,13 +93,14 @@ function generateSearchItems(searchItems) {
     });
     // Adding add to cart div to parent div
     doc.appendChild(addToCartEl);
+    doc.appendChild(addToWishlistEl);
     searchItemsDiv.appendChild(doc);
   });
 }
 
 searchInput.addEventListener("change", (event) => {
   document.querySelector(".search-result-name").classList.remove("hidden");
-  let searchValue = event.target.value;
+  var searchValue = event.target.value;
   getSearchItems(searchValue);
 });
 
@@ -107,7 +126,7 @@ function generateItems(items) {
   let itemsHTML = "";
   items.forEach((item) => {
     let doc = document.createElement("div");
-    doc.classList.add("main-product", "m-5");
+    doc.classList.add("main-product", "m-5", "relative");
     doc.innerHTML = `
     <div class="product-image w-48 h-52 bg-white rounded-lg p-4">
                       <!-- image -->
@@ -127,6 +146,23 @@ function generateItems(items) {
                   </div>
                   
     `;
+    // Creating wishlist child element for item
+    let addToWishlistEl = document.createElement("div");
+    addToWishlistEl.classList.add(
+      "wishlist-icon",
+      "absolute",
+      "h-6",
+      "w-6",
+      "top-1",
+      "right-1",
+      "text-yellow-500",
+      "cursor-pointer",
+      "hover:text-yellow-600"
+    );
+    addToWishlistEl.innerHTML = `<i class="fa fa-heart" aria-hidden="true"></i>`;
+    addToWishlistEl.addEventListener("click", function () {
+      addToWishlist(item);
+    });
     // Creating Add to Cart Child Element for item
     let addToCartEl = document.createElement("div");
     addToCartEl.classList.add(
@@ -157,6 +193,7 @@ function generateItems(items) {
     });
     // Adding add to cart div to parent div
     doc.appendChild(addToCartEl);
+    doc.appendChild(addToWishlistEl);
     document.querySelector(".main-section-products").appendChild(doc);
   });
 }
@@ -177,6 +214,25 @@ function addToCart(item) {
         rating: item.rating,
         price: item.price,
         quantity: 1,
+      });
+    }
+  });
+}
+
+// function to add items to wishlist in database
+
+function addToWishlist(item) {
+  let wishlistItem = db.collection("wishlist-items").doc(item.id);
+  wishlistItem.get().then(function (doc) {
+    if (doc.exists) {
+      wishlistItem.delete();
+    } else {
+      wishlistItem.set({
+        image: item.image,
+        name: item.name,
+        make: item.make,
+        rating: item.rating,
+        price: item.price,
       });
     }
   });
