@@ -12,7 +12,7 @@
     user-select: none;
 }
 body {
-    /* overflow: hidden; */
+    font-size: 16px;
 }
 
 ::-webkit-scrollbar {

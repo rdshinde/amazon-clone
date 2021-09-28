@@ -106,7 +106,7 @@ searchInput.addEventListener("change", (event) => {
 });
 // Function To get Items in Hot Deals
 function getItems() {
-  db.collection("items").onSnapshot((snapshot) => {
+  db.collection("iphones").onSnapshot((snapshot) => {
     let items = [];
     snapshot.docs.forEach((doc) => {
       items.push({
@@ -127,9 +127,9 @@ function generateItems(items) {
     let doc = document.createElement("div");
     doc.classList.add("main-product", "m-5", "relative");
     doc.innerHTML = `
-    <div class="product-image w-48 h-52 bg-white rounded-lg p-4">
+    <div class="product-image w-48 h-52 bg-white rounded-xl p-4">
                       <!-- image -->
-                      <img class="w-full h-full object-contain" src="${item.image}" alt="">
+                      <img class="w-full h-full p-2 object-contain" src="${item.image}" alt="">
                   </div>
                   <div class="product-name text-gray-700 font-bold text-sm mt-2">
                     ${item.name}
@@ -137,8 +137,8 @@ function generateItems(items) {
                   <div class="product-make text-green-700">
                   ${item.make}
                   </div>
-                  <div class="product-rating text-yellow-500 font-bold my-1">
-                    ⭐️⭐️⭐️⭐️⭐️ ${item.rating}
+                  <div class="product-rating inline-block ml-auto rounded-2xl bg-green-500  text-white my-2 justify-around">
+                    <h4 class="p-2 inline"> ${item.rating} ★ </h4>
                   </div>
                   <div class="product-price font-bold text-gray-700 text-lg">
                     ₹ ${item.price}
