@@ -50,6 +50,7 @@ function increaseCount(itemID){
 }
 // Function for deleting item
 function deleteItem(itemID){
+    messageHandler(`Item removed from cart successfully!`);
     db.collection("cart-items").doc(itemID).delete();
 }
 

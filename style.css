@@ -11,6 +11,14 @@
     -ms-user-select: none;
     user-select: none;
 }
+body {
+    /* overflow: hidden; */
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+
 .main-banner{
     background-image: url(https://images-eu.ssl-images-amazon.com/images/G/31/AmazonKarigar/Saheli_store_banner.png);
     background-position: center;
@@ -49,5 +57,14 @@
     }
     to{
         transform: rotate(1turn);
+    }
+}
+.get-message{
+    animation: disappearing-message 0.5s ease forwards;
+    
+}
+@keyframes disappearing-message{
+    0%{
+        transform: translateX(100%);
     }
 }

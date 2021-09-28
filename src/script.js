@@ -190,6 +190,7 @@ function generateItems(items) {
         addToCartEl.innerText = "Add to Cart";
         addToCartEl.classList.remove("button-loading");
       }, 2000);
+      
     });
     // Adding add to cart div to parent div
     doc.appendChild(addToCartEl);
@@ -206,6 +207,7 @@ function addToCart(item) {
       cartItem.update({
         quantity: doc.data().quantity + 1,
       });
+      messageHandler(`Item quantity incresed by one!`);
     } else {
       cartItem.set({
         image: item.image,
@@ -215,6 +217,7 @@ function addToCart(item) {
         price: item.price,
         quantity: 1,
       });
+      messageHandler(`Item added to cart successfully!`);
     }
   });
 }
@@ -225,7 +228,7 @@ function addToWishlist(item,ele) {
   let wishlistItem = db.collection("wishlist-items").doc(item.id);
   wishlistItem.get().then(function (doc) {
     if (doc.exists) {
-      alert("Item removed from wishlist! ");
+      messageHandler(`Item removed from wishlist successfully!`);
       ele.style.color = "#e5e7eb";
       wishlistItem.delete();
     } else {
@@ -236,6 +239,8 @@ function addToWishlist(item,ele) {
         rating: item.rating,
         price: item.price,
       });
+      messageHandler(`Item added to wishlist successfully!`);
     }
   });
 }
+

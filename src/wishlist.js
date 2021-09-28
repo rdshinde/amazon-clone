@@ -14,6 +14,7 @@ function getWishlistItems() {
 
 // Function for deleting item
 function deleteWishlistItem(itemID) {
+  messageHandler(`Item removed from wishlist successfully!`);
   db.collection("wishlist-items").doc(itemID).delete();
 }
 
