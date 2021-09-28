@@ -121,8 +121,19 @@ function getItems() {
 getItems();
 
 function generateItems(items) {
+  let iconColor = "";
   let itemsHTML = "";
   items.forEach((item) => {
+    let chechItem =  db.collection("wishlist-items").doc(item.id);
+    chechItem.get().then(function(wItem){
+      if(wItem.exists){
+        console.log("yes");
+        iconColor = "yellow-500";
+      }
+      else{
+        iconColor = "gray-200"; 
+      }
+    })
     let doc = document.createElement("div");
     doc.classList.add("main-product", "m-5", "relative");
     doc.innerHTML = `
@@ -153,13 +164,14 @@ function generateItems(items) {
       "w-6",
       "top-1",
       "right-1",
-      "text-gray-200",
+      `text-${iconColor}`,
       "cursor-pointer",
       "hover:text-yellow-600"
     );
     addToWishlistEl.innerHTML = `<i class="fa fa-heart" aria-hidden="true"></i>`;
     addToWishlistEl.addEventListener("click", function () {
-      addToWishlist(item);
+      addToWishlist(item,addToWishlistEl);
+      addToWishlistEl.style.color = "#f59e0b";
     });
     // Creating Add to Cart Child Element for item
     let addToCartEl = document.createElement("div");
@@ -219,11 +231,13 @@ function addToCart(item) {
 
 // function to add items to wishlist in database
 
-function addToWishlist(item) {
+function addToWishlist(item,ele) {
   let wishlistItem = db.collection("wishlist-items").doc(item.id);
   wishlistItem.get().then(function (doc) {
     if (doc.exists) {
-      alert("Already present in wishlist! ");
+      alert("Item removed from wishlist! ");
+      ele.style.color = "#e5e7eb";
+      wishlistItem.delete();
     } else {
       wishlistItem.set({
         image: item.image,
