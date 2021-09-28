@@ -41,7 +41,7 @@
     <title>Amazon Clone</title>
   </head>
 
-  <body>
+  <body class="unselectable">
     <!-- Whole body container -->
     <div class="bg-white w-full min-w-screen">
       <!-- Header Div -->
@@ -199,7 +199,7 @@
           "
         >
           <!-- Wishlist icon -->
-          <svg
+          <a href="./wishlist.html"><svg
             class="wishlist h-4 w-4 cursor-pointer"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -212,7 +212,7 @@
               stroke-width="2"
               d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
             />
-          </svg>
+          </svg></a>
           <!-- Cart Icon Div -->
           <div
             class="
@@ -372,19 +372,7 @@
           </div>
         </div>
         <!-- Main shopping div -->
-        <div class="shoping-section main-h-screen flex-1 p-6 bg-gray-100 relative ">
-          <div class="wishlist-showcase absolute w-full h-full bg-gray-200 z-10 top-0 left-0 hidden">
-            <h1 class="
-            font-bold
-            text-yellow-900 text-2xl
-            flex
-            items-center
-            p-5
-          ">Items In Your Wishlist ♥️ </h1>
-            <div class="wishlist-items flex flex-wrap mt-10">
-              <!-- Wishlist Items will come here -->
-            </div>
-          </div>
+        <div class="shoping-section main-h-screen flex-1 p-6 bg-gray-100">
           <div class="main-banner h-44 rounded-lg flex items-end">
             <div
               class="
@@ -701,7 +689,7 @@
             Hot Deals 🔥 
           </h1>
           <div class="main-section-products flex flex-wrap">
-              
+              <!-- Items come here -->
           </div>
           </div>
         </div>
@@ -713,5 +701,6 @@
     <script src="./src/header.js"></script>
     <script src="./src/cart.js"></script>
     <script src="./src/index.js"></script>
+    <script src="./src/wishlist.js"></script>
   </body>
 </html>

@@ -32,9 +32,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
 
     <!-- local js -->
-    <script src="./src/firebase.js"></script>
-    <script src="./src/header.js"></script>
-    <script src="./src/cart.js"></script>
+    
 
     <!-- Title -->
     <title>Amazon Clone | Cart</title>
@@ -371,55 +369,10 @@
         </div>
         <!-- Main shopping div -->
         <div class="shoping-section flex-1 p-6 bg-white relative">
-          <div class="wishlist-showcase absolute w-full h-full bg-gray-200 z-10 top-0 left-0 hidden">
-            <h1 class="
-            font-bold
-            text-yellow-900 text-2xl
-            flex
-            items-center
-            p-5
-          ">Items In Your Wishlist ♥️ </h1>
+          <!-- Wishlist Heading -->
+          <h1 class="font-bold text-gray-400 text-3xl mb-6">Your Wishlist ♥️ </h1>
             <div class="wishlist-items flex flex-wrap mt-10">
               <!-- Wishlist Items will come here -->
-            </div>
-          </div>
-          <!-- Shopping Cart Heading -->
-          <h1 class="font-bold text-gray-400 text-3xl mb-6">Shopping Cart</h1>
-          <div class="table-titles flex font-bold text-gray-400">
-            <h2 class="flex-grow">Products</h2>
-            <h2 class="w-48">Count</h2>
-            <h2 class="w-48">Total Cost</h2>
-            <span class="w-10"></span>
-          </div>
-          <!-- Cart Items one -->
-          
-          <!-- Cart Items two -->
-          <div class="cart-items">
-            <!-- Cart items goes here -->
-          </div>
-          <div class="complete-order flex justify-end mt-10">
-            <div class="total-cost mr-7">
-              <h2 class="text-gray-400">Total Cost</h2>
-              <div class="total-cost-number text-gray-600 text-3xl font-bold">
-                
-              </div>
-            </div>
-            <div
-              class="
-                complete-order-button
-                flex
-                items-center
-                justify-center
-                w-56
-                bg-yellow-500
-                rounded-lg
-                text-white
-                cursor-pointer
-                font-bold
-                hover:bg-yellow-600
-              "
-            >
-              Complete Order
             </div>
           </div>
           <div class="searched-items flex flex-wrap mt-20 ml-5">
@@ -445,10 +398,10 @@
         </div>
         
       </div>
-      
-    </div>
-    
-
+      <!-- Javascript Files Added Here -->
+    <script src="./src/firebase.js"></script>
+    <script src="./src/header.js"></script>
+    <script src="./src/cart.js"></script>
     <script src="./src/index.js"></script>
     <script src="./src/script.js"></script>
     <script src="./src/wishlist.js"></script>
