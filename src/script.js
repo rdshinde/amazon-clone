@@ -124,16 +124,6 @@ function generateItems(items) {
   let iconColor = "";
   let itemsHTML = "";
   items.forEach((item) => {
-    let chechItem =  db.collection("wishlist-items").doc(item.id);
-    chechItem.get().then(function(wItem){
-      if(wItem.exists){
-        console.log("yes");
-        iconColor = "yellow-500";
-      }
-      else{
-        iconColor = "gray-200"; 
-      }
-    })
     let doc = document.createElement("div");
     doc.classList.add("main-product", "m-5", "relative");
     doc.innerHTML = `
@@ -164,7 +154,7 @@ function generateItems(items) {
       "w-6",
       "top-1",
       "right-1",
-      `text-${iconColor}`,
+      `text-gray-200`,
       "cursor-pointer",
       "hover:text-yellow-600"
     );
