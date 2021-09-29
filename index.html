@@ -279,6 +279,7 @@
         <!-- Sidebar Div -->
         <div
           class="
+          sticky
             main-right-sidebar
             border-t border-yellow-500
             w-1/5
@@ -286,10 +287,10 @@
             bg-yellow-200
             text-yellow-900
             p-6 
-            
+           
           "
         >
-          <div class="sidebar-categories cursor-pointer">
+          <div class="sidebar-categories">
             <div
               class="
                 cursor-pointer
@@ -321,31 +322,31 @@
             </div>
             <div class="sidebar-subcategories flex text-yellow-500 p-2">
               <span class="w-8"></span>
-              <span>Echo and Alexa</span>
+              <a href="#hot-deals"><span>Hot Deals</span></a>
             </div>
             <div class="sidebar-subcategories flex text-yellow-500 p-2">
               <span class="w-8"></span>
-              <span>Kindle</span>
+              <a href="#laotops"><span>Laptops</span></a>
             </div>
             <div class="sidebar-subcategories flex text-yellow-500 p-2">
               <span class="w-8"></span>
-              <span>Electronics</span>
+              <a href="#smartphones"><span>Smartphones</span></a>
             </div>
             <div class="sidebar-subcategories flex text-yellow-500 p-2">
               <span class="w-8"></span>
-              <span>Books</span>
+              <a href="smartwatch"><span>Smartwatches</span></a>
             </div>
             <div class="sidebar-subcategories flex text-yellow-500 p-2">
               <span class="w-8"></span>
-              <span>Grossary</span>
+              <a href="#ipads"><span>Tablets and iPads</span></a>
             </div>
             <div class="sidebar-subcategories flex text-yellow-500 p-2">
               <span class="w-8"></span>
-              <span>Home and Garden </span>
+              <a href="#computers"><span>PC's</span></a>
             </div>
             <div class="sidebar-subcategories flex text-yellow-500 p-2 mb-3">
               <span class="w-8"></span>
-              <span>Fashion</span>
+              <a href="#accessories"><span>Accessories</span></a>
             </div>
             <div
               class="
@@ -356,10 +357,13 @@
                 hover:bg-yellow-100
                 rounded-xl
                 font-bold
+                cursor-pointer
               "
             >
-              <span class="w-8"><i class="fas fa-percentage"></i></span>
-              <span>Sell on Amazon</span>
+              <span class="w-8"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg></span>
+              <span>Contact Us</span>
             </div>
             <div
               class="
@@ -370,6 +374,7 @@
                 hover:bg-yellow-100
                 rounded-xl
                 font-bold
+                cursor-pointer
               "
             >
               <span class="w-8"><i class="far fa-question-circle"></i> </span>
@@ -378,7 +383,7 @@
           </div>
         </div>
         <!-- Main shopping div -->
-        <div class="shoping-section main-h-screen flex-1 p-6 bg-gray-100 ">
+        <div class="shoping-section main-h-screen flex-1 p-6 bg-gray-100  ">
          
           
           <div class="main-banner h-44 rounded-lg flex items-end">
@@ -397,7 +402,7 @@
                 cursor-pointer
               "
             >
-              <h4 class="text-bold">Browse Products</h4>
+              <a href="#hot-deals"><h4 class="text-bold">Browse Products</h4></a>
             </div>
           </div>
           <div class="section-categories mt-10">
@@ -685,7 +690,8 @@
           </div>
           <!-- Main Deals (Hot Deals) -->
           <div class="main-deals mt-10">
-            <h1
+            <h1 
+            id="hot-deals"
             class="
               popular-categories
               font-bold
@@ -703,6 +709,7 @@
           <!-- Iphone Section -->
           <div class="iphones mt-10">
             <h1
+            id="smartphones"
             class="
               popular-categories
               font-bold
@@ -720,6 +727,7 @@
           <!-- Ipad Section -->
           <div class="ipads mt-10">
             <h1
+            id="ipads"
             class="
               popular-categories
               font-bold
@@ -737,6 +745,7 @@
           <!-- Macbook Section -->
           <div class="macbooks mt-10">
             <h1
+            id="laptops"
             class="
               popular-categories
               font-bold
