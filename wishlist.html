@@ -40,7 +40,13 @@
 
   <body class="unselectable">
     <!-- Whole body container -->
-    <div class="bg-white w-full">
+    <div class="bg-white w-full min-w-screen">
+      <!-- preloader -->
+      <div class="preloader hidden loader-bg">
+       <div class="loader-p">
+       </div>
+ 
+   </div>
       <!-- Header Div -->
       <div class="header h-16 bg-yellow-200 flex items-center sticky top-0 z-50">
         <!-- Logo Div -->
@@ -91,7 +97,7 @@
             text-yellow-600
           "
         >
-        <button class="overlay fixed inset-0 h-full w-full  cursor-default bg-gray-50 bg-opacity-25"></button>
+        <button class="overlay fixed inset-0 h-full w-full  cursor-default bg-gray-50 bg-opacity-25 hidden"></button>
           Categories
           <!-- Categories downword arraow icon SVG-->
           <svg
@@ -112,7 +118,7 @@
             
           </svg>
           
-          <div tabindex="-1" class="category-dropdown absolute shadow-2xl  p-2 -mt-3 -ml-3 top-12 w-30 h-100 justify-center bg-yellow-100 rounded-br-xl rounded-bl-xl border-yellow-500
+          <div tabindex="-1" class="category-dropdown absolute shadow-2xl  p-2 -mt-3 -ml-3 top-12 w-30 h-100 justify-center bg-yellow-100 rounded-br-xl rounded-bl-xl border-yellow-500 hidden
           ">
           
             <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">

@@ -60,7 +60,7 @@ function addPreloader(){
 function removePreloader(){
   setTimeout(function(){
     preloader.classList.add("hidden");
-  },4000)
+  },3000)
 }
 
 function preloaderHandler(){

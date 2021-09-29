@@ -171,7 +171,7 @@ function addToWishlist(item, ele) {
 
 // for getting iphones
 function getIphones(iphonesDiv){
-  db.collection("items").onSnapshot((snapshot) => {
+  db.collection("iphones").onSnapshot((snapshot) => {
     let items = [];
     snapshot.docs.forEach((doc) => {
       if(doc.data().type == "iphone"){
