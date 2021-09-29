@@ -1,5 +1,7 @@
 const searchItemsDiv = document.querySelector(".search-items");
 const searchInput = document.querySelector(".search-item");
+const hotDeals = document.querySelector(".main-section-products");
+// const divname = ".main-section-products";
 
 function getSearchItems(searchValue) {
   db.collection("items").onSnapshot((snapshot) => {
@@ -14,22 +16,14 @@ function getSearchItems(searchValue) {
           ...doc.data(),
         });
         searchItemsDiv.innerHTML = "";
-        generateSearchItems(searchItems);
+        generateItems(searchItems,searchItemsDiv);
       }
-      // if(!doc.data().name.toLowerCase().includes(searchValue.toLowerCase()) ||
-      //   doc.data().make.toLowerCase().includes(searchValue.toLowerCase())){
-      //   searchItemsDiv.innerText = `
-
-      //     Items not Found for search "${searchValue}" 😔.
-
-      //   `;
-      // }
     });
   });
 }
 
 // Function for printing search items
-function generateSearchItems(searchItems) {
+/*function generateSearchItems(searchItems) {
   let itemsHTML = "";
   searchItems.forEach((searchItem) => {
     let doc = document.createElement("div");
@@ -45,8 +39,8 @@ function generateSearchItems(searchItems) {
                   <div class="product-make text-green-700">
                   ${searchItem.make}
                   </div>
-                  <div class="product-rating text-yellow-500 font-bold my-1">
-                    ⭐️⭐️⭐️⭐️⭐️ ${searchItem.rating}
+                  <div class="product-rating inline-block ml-auto rounded-2xl bg-green-500  text-white my-2 justify-around">
+                    <h4 class="p-2 inline"> ${searchItem.rating} ★ </h4>
                   </div>
                   <div class="product-price font-bold text-gray-700 text-lg">
                     ₹ ${searchItem.price}
@@ -68,7 +62,8 @@ function generateSearchItems(searchItems) {
     );
     addToWishlistEl.innerHTML = `<i class="fa fa-heart" aria-hidden="true"></i>`;
     addToWishlistEl.addEventListener("click", function () {
-      addToWishlist(searchItem);
+      addToWishlist(searchItem,addToWishlistEl);
+      addToWishlistEl.style.color = "#f59e0b";
     });
     // Creating Add to Cart Child Element for searchItem
     let addToCartEl = document.createElement("div");
@@ -91,13 +86,19 @@ function generateSearchItems(searchItems) {
     // Add to cart 'click' Event listener
     addToCartEl.addEventListener("click", function () {
       addToCart(searchItem);
+      addToCartEl.innerText = "";
+      addToCartEl.classList.add("button-loading");
+      setTimeout(function () {
+        addToCartEl.innerText = "Add to Cart";
+        addToCartEl.classList.remove("button-loading");
+      }, 2000);
     });
     // Adding add to cart div to parent div
     doc.appendChild(addToCartEl);
     doc.appendChild(addToWishlistEl);
     searchItemsDiv.appendChild(doc);
   });
-}
+}*/
 
 searchInput.addEventListener("change", (event) => {
   document.querySelector(".search-result-name").classList.remove("hidden");
@@ -105,8 +106,8 @@ searchInput.addEventListener("change", (event) => {
   getSearchItems(searchValue);
 });
 // Function To get Items in Hot Deals
-function getItems() {
-  db.collection("iphones").onSnapshot((snapshot) => {
+function getItems(divname) {
+  db.collection("items").onSnapshot((snapshot) => {
     let items = [];
     snapshot.docs.forEach((doc) => {
       items.push({
@@ -114,15 +115,13 @@ function getItems() {
         ...doc.data(),
       });
     });
-    generateItems(items);
+    generateItems(items,divname);
   });
 }
 
-getItems();
+getItems(hotDeals);
 
-function generateItems(items) {
-  let iconColor = "";
-  let itemsHTML = "";
+function generateItems(items,divname) {
   items.forEach((item) => {
     let doc = document.createElement("div");
     doc.classList.add("main-product", "m-5", "relative");
@@ -195,7 +194,7 @@ function generateItems(items) {
     // Adding add to cart div to parent div
     doc.appendChild(addToCartEl);
     doc.appendChild(addToWishlistEl);
-    document.querySelector(".main-section-products").appendChild(doc);
+    divname.appendChild(doc);
   });
 }
 
