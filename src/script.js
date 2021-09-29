@@ -1,8 +1,11 @@
 const searchItemsDiv = document.querySelector(".search-items");
 const searchInput = document.querySelector(".search-item");
 const hotDeals = document.querySelector(".main-section-products");
-// const divname = ".main-section-products";
+const iphonesDiv = document.querySelector(".iphone-section-products");
+const ipadDiv = document.querySelector(".ipad-section-products");
+const macbookDiv = document.querySelector(".macbook-section-products");
 
+// For getting search items from database
 function getSearchItems(searchValue) {
   db.collection("items").onSnapshot((snapshot) => {
     let searchItems = [];
@@ -16,98 +19,22 @@ function getSearchItems(searchValue) {
           ...doc.data(),
         });
         searchItemsDiv.innerHTML = "";
-        generateItems(searchItems,searchItemsDiv);
+        generateItems(searchItems, searchItemsDiv);
       }
     });
   });
 }
 
-// Function for printing search items
-/*function generateSearchItems(searchItems) {
-  let itemsHTML = "";
-  searchItems.forEach((searchItem) => {
-    let doc = document.createElement("div");
-    doc.classList.add("main-product", "m-5", "relative");
-    doc.innerHTML = `
-    <div class="product-image w-48 h-52 bg-white rounded-lg p-4">
-                      <!-- image -->
-                      <img class="w-full h-full object-contain" src="${searchItem.image}" alt="">
-                  </div>
-                  <div class="product-name text-gray-700 font-bold text-sm mt-2">
-                    ${searchItem.name}
-                  </div>
-                  <div class="product-make text-green-700">
-                  ${searchItem.make}
-                  </div>
-                  <div class="product-rating inline-block ml-auto rounded-2xl bg-green-500  text-white my-2 justify-around">
-                    <h4 class="p-2 inline"> ${searchItem.rating} ★ </h4>
-                  </div>
-                  <div class="product-price font-bold text-gray-700 text-lg">
-                    ₹ ${searchItem.price}
-                  </div>
-                  
-    `;
-    // Creating wishlist child element for item
-    let addToWishlistEl = document.createElement("div");
-    addToWishlistEl.classList.add(
-      "wishlist-icon",
-      "absolute",
-      "h-6",
-      "w-6",
-      "top-1",
-      "right-1",
-      "text-gray-200",
-      "cursor-pointer",
-      "hover:text-yellow-600"
-    );
-    addToWishlistEl.innerHTML = `<i class="fa fa-heart" aria-hidden="true"></i>`;
-    addToWishlistEl.addEventListener("click", function () {
-      addToWishlist(searchItem,addToWishlistEl);
-      addToWishlistEl.style.color = "#f59e0b";
-    });
-    // Creating Add to Cart Child Element for searchItem
-    let addToCartEl = document.createElement("div");
-    addToCartEl.classList.add(
-      "add-to-cart",
-      "h-8",
-      "w-28",
-      "bg-yellow-500",
-      "flex",
-      "items-center",
-      "justify-center",
-      "rounded",
-      "cursor-pointer",
-      "text-md",
-      "hover:bg-yellow-600",
-      "mt-1",
-      "text-white"
-    );
-    addToCartEl.innerText = "Add to Cart";
-    // Add to cart 'click' Event listener
-    addToCartEl.addEventListener("click", function () {
-      addToCart(searchItem);
-      addToCartEl.innerText = "";
-      addToCartEl.classList.add("button-loading");
-      setTimeout(function () {
-        addToCartEl.innerText = "Add to Cart";
-        addToCartEl.classList.remove("button-loading");
-      }, 2000);
-    });
-    // Adding add to cart div to parent div
-    doc.appendChild(addToCartEl);
-    doc.appendChild(addToWishlistEl);
-    searchItemsDiv.appendChild(doc);
-  });
-}*/
-
+// Event Listener for searchbar
 searchInput.addEventListener("change", (event) => {
   document.querySelector(".search-result-name").classList.remove("hidden");
   var searchValue = event.target.value;
+  messageHandler(`Search result for "${searchValue}" is ready!`);
   getSearchItems(searchValue);
 });
 // Function To get Items in Hot Deals
 function getItems(divname) {
-  db.collection("items").onSnapshot((snapshot) => {
+  db.collection("hot-deals").onSnapshot((snapshot) => {
     let items = [];
     snapshot.docs.forEach((doc) => {
       items.push({
@@ -115,13 +42,13 @@ function getItems(divname) {
         ...doc.data(),
       });
     });
-    generateItems(items,divname);
+    generateItems(items, divname);
   });
 }
 
 getItems(hotDeals);
 
-function generateItems(items,divname) {
+function generateItems(items, divname) {
   items.forEach((item) => {
     let doc = document.createElement("div");
     doc.classList.add("main-product", "m-5", "relative");
@@ -159,7 +86,7 @@ function generateItems(items,divname) {
     );
     addToWishlistEl.innerHTML = `<i class="fa fa-heart" aria-hidden="true"></i>`;
     addToWishlistEl.addEventListener("click", function () {
-      addToWishlist(item,addToWishlistEl);
+      addToWishlist(item, addToWishlistEl);
       addToWishlistEl.style.color = "#f59e0b";
     });
     // Creating Add to Cart Child Element for item
@@ -189,7 +116,6 @@ function generateItems(items,divname) {
         addToCartEl.innerText = "Add to Cart";
         addToCartEl.classList.remove("button-loading");
       }, 2000);
-      
     });
     // Adding add to cart div to parent div
     doc.appendChild(addToCartEl);
@@ -223,7 +149,7 @@ function addToCart(item) {
 
 // function to add items to wishlist in database
 
-function addToWishlist(item,ele) {
+function addToWishlist(item, ele) {
   let wishlistItem = db.collection("wishlist-items").doc(item.id);
   wishlistItem.get().then(function (doc) {
     if (doc.exists) {
@@ -243,3 +169,57 @@ function addToWishlist(item,ele) {
   });
 }
 
+// for getting iphones
+function getIphones(iphonesDiv){
+  db.collection("items").onSnapshot((snapshot) => {
+    let items = [];
+    snapshot.docs.forEach((doc) => {
+      if(doc.data().type == "iphone"){
+        items.push({
+          id: doc.id,
+          ...doc.data(),
+        });
+      }
+    });
+    generateItems(items,iphonesDiv);
+  });
+}
+
+getIphones(iphonesDiv);
+
+
+// for getting ipads
+function getIpads(ipadDiv){
+  db.collection("items").onSnapshot((snapshot) => {
+    let items = [];
+    snapshot.docs.forEach((doc) => {
+      if(doc.data().type == "ipad"){
+        items.push({
+          id: doc.id,
+          ...doc.data(),
+        });
+      }
+    });
+    generateItems(items,ipadDiv);
+  });
+}
+
+getIpads(ipadDiv);
+
+// for getting macbooks
+function getMacbooks(macbookDiv){
+  db.collection("items").onSnapshot((snapshot) => {
+    let items = [];
+    snapshot.docs.forEach((doc) => {
+      if(doc.data().type == "macbook"){
+        items.push({
+          id: doc.id,
+          ...doc.data(),
+        });
+      }
+    });
+    generateItems(items,macbookDiv);
+  });
+}
+
+getMacbooks(macbookDiv);

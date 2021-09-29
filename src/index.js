@@ -5,10 +5,13 @@ const dropDownList = document.querySelector(".category-dropdown");
 const overlayDiv = document.querySelector(".overlay");
 
 function onloadHandler() {
+  preloaderHandler()
   dropDownList.classList.add("hidden");
   overlayDiv.classList.add("hidden");
+  preloaderHandler()
 }
 window.onload = onloadHandler;
+
 
 dropdownArrow.addEventListener("click", function () {
   if (dropDownList.classList.contains("hidden")) {
@@ -46,4 +49,21 @@ function messageHandler(msg) {
   setTimeout(function(){
     removeMessage(msg)
   }, 3000);
+}
+
+const preloader = document.querySelector(".preloader");
+
+function addPreloader(){
+  preloader.classList.remove("hidden");
+}
+
+function removePreloader(){
+  setTimeout(function(){
+    preloader.classList.add("hidden");
+  },4000)
+}
+
+function preloaderHandler(){
+  addPreloader();
+  removePreloader();
 }

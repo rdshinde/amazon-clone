@@ -1,70 +1,117 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 body {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
+}
+
+.main-banner {
+  background-image: url(https://images-eu.ssl-images-amazon.com/images/G/31/AmazonKarigar/Saheli_store_banner.png);
+  background-position: center;
+  background-size: cover;
+}
+.hidden {
+  display: none;
+}
+
+.add-to-cart {
+  position: relative;
+}
+.add-to-cart:active {
+}
+.button-loading {
+}
+.button-loading::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  top: 5px;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  margin: auto;
+  border: 3px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
   }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.get-message {
+  animation: disappearing-message 0.5s ease forwards;
+}
+@keyframes disappearing-message {
+  0% {
+    transform: translateX(100%);
+  }
+} /*CUSTOM PRELOADER*/
+.loader-bg {
+  position: fixed;
+  z-index: 999999;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  top: 4rem;
+  left: 20%;
+}
+.loader-p {
+  border: 0 solid transparent;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: calc(50vh - 75px);
+  left: calc(50vw - 75px);
+}
 
-.main-banner{
-    background-image: url(https://images-eu.ssl-images-amazon.com/images/G/31/AmazonKarigar/Saheli_store_banner.png);
-    background-position: center;
-    background-size:cover ;
-}
-.hidden{
-    display: none;
+.loader-p:before,
+.loader-p:after {
+  content: "";
+  border: 1em solid #e38a15;
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loader 2s linear infinite;
+  opacity: 0;
 }
 
-.add-to-cart{
-    position: relative;
+.loader-p:before {
+  animation-delay: 0.5s;
 }
-.add-to-cart:active{
-    
-}
-.button-loading{
-    
-}
-.button-loading::after{
-    content:"";
-    position: absolute;
-    width: 20px;
-    top:5px;
-    left: 0;
-    right: 0;
-    bottom: 5px;
-    margin: auto;
-    border: 3px solid transparent;
-    border-top-color:#ffffff ;
-    border-radius: 50%;
-    animation: button-loading-spinner 1s ease infinite;
-}
-@keyframes button-loading-spinner{
-    from{
-        transform: rotate(0turn);
-    }
-    to{
-        transform: rotate(1turn);
-    }
-}
-.get-message{
-    animation: disappearing-message 0.5s ease forwards;
-    
-}
-@keyframes disappearing-message{
-    0%{
-        transform: translateX(100%);
-    }
+
+@keyframes loader {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
 }
