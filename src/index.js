@@ -5,10 +5,9 @@ const dropDownList = document.querySelector(".category-dropdown");
 const overlayDiv = document.querySelector(".overlay");
 
 function onloadHandler() {
-  preloaderHandler()
+  preloaderHandler();
 }
 window.onload = onloadHandler;
-
 
 dropdownArrow.addEventListener("click", function () {
   if (dropDownList.classList.contains("hidden")) {
@@ -33,7 +32,6 @@ overlayDiv.addEventListener("click", function () {
 function addMessage(msg) {
   messageDiv.innerText = msg;
   messageDiv.classList.remove("hidden");
-  
 }
 
 function removeMessage(msg) {
@@ -43,24 +41,24 @@ function removeMessage(msg) {
 
 function messageHandler(msg) {
   addMessage(msg);
-  setTimeout(function(){
-    removeMessage(msg)
+  setTimeout(function () {
+    removeMessage(msg);
   }, 3000);
 }
 
 const preloader = document.querySelector(".preloader");
 
-function addPreloader(){
+function addPreloader() {
   preloader.classList.remove("hidden");
 }
 
-function removePreloader(){
-  setTimeout(function(){
+function removePreloader() {
+  setTimeout(function () {
     preloader.classList.add("hidden");
-  },3000)
+  }, 3000);
 }
 
-function preloaderHandler(){
+function preloaderHandler() {
   addPreloader();
   removePreloader();
 }

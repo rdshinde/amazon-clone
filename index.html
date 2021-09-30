@@ -30,7 +30,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
-  
+
     <!-- Title -->
     <title>Amazon Clone</title>
   </head>
@@ -38,14 +38,14 @@
   <body class="unselectable">
     <!-- Whole body container -->
     <div class="bg-white w-full min-w-screen">
-     <!-- preloader -->
-     <div class="preloader hidden loader-bg">
-      <div class="loader-p">
+      <!-- preloader -->
+      <div class="preloader hidden loader-bg">
+        <div class="loader-p"></div>
       </div>
-
-  </div>
       <!-- Header Div -->
-      <div class="header h-16 bg-yellow-200 flex items-center sticky top-0 z-50">
+      <div
+        class="header h-16 bg-yellow-200 flex items-center sticky top-0 z-50"
+      >
         <!-- Logo Div -->
         <div class="logo w-1/5 h-16 ml-10 pt-1">
           <a href="index.html">
@@ -79,7 +79,6 @@
         />
         <!-- Categories Search -->
         <div
-        
           class="
             relative
             categories
@@ -94,12 +93,30 @@
             text-yellow-600
           "
         >
-        <button class="overlay fixed inset-0 h-full w-full  cursor-default bg-gray-50 bg-opacity-25 hidden"></button>
+          <button
+            class="
+              overlay
+              fixed
+              inset-0
+              h-full
+              w-full
+              cursor-default
+              bg-gray-50 bg-opacity-25
+              hidden
+            "
+          ></button>
           Categories
           <!-- Categories downword arraow icon SVG-->
           <svg
-          
-            class="category-dropdown-arrow h-4 w-4 ml-2 cursor-pointer relative z-10 "
+            class="
+              category-dropdown-arrow
+              h-4
+              w-4
+              ml-2
+              cursor-pointer
+              relative
+              z-10
+            "
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
             fill="none"
@@ -112,45 +129,122 @@
               stroke-width="2"
               d="M19 9l-7 7-7-7"
             />
-            
           </svg>
-          
-          <div tabindex="-1" class="category-dropdown absolute shadow-2xl  p-2 -mt-3 -ml-3 top-12 w-30 h-100 justify-center bg-yellow-100 rounded-br-xl rounded-bl-xl border-yellow-500 hidden
-          ">
-          
-            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">
+
+          <div
+            tabindex="-1"
+            class="
+              category-dropdown
+              absolute
+              shadow-2xl
+              p-2
+              -mt-3
+              -ml-3
+              top-12
+              w-30
+              h-100
+              justify-center
+              bg-yellow-100
+              rounded-br-xl rounded-bl-xl
+              border-yellow-500
+              hidden
+            "
+          >
+            <div
+              class="
+                text-yellow-500 text-white
+                font-bold
+                p-2
+                hover:bg-yellow-200
+                cursor-pointer
+                rounded-lg
+              "
+            >
               <span class="w-8"></span>
               <span>Echo and Alexa</span>
             </div>
-            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">
+            <div
+              class="
+                text-yellow-500 text-white
+                font-bold
+                p-2
+                hover:bg-yellow-200
+                cursor-pointer
+                rounded-lg
+              "
+            >
               <span class="w-8"></span>
               <span>Kindle</span>
             </div>
-            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">
+            <div
+              class="
+                text-yellow-500 text-white
+                font-bold
+                p-2
+                hover:bg-yellow-200
+                cursor-pointer
+                rounded-lg
+              "
+            >
               <span class="w-8"></span>
               <span>Electronics</span>
             </div>
-            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">
+            <div
+              class="
+                text-yellow-500 text-white
+                font-bold
+                p-2
+                hover:bg-yellow-200
+                cursor-pointer
+                rounded-lg
+              "
+            >
               <span class="w-8"></span>
               <span>Books</span>
             </div>
-            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">
+            <div
+              class="
+                text-yellow-500 text-white
+                font-bold
+                p-2
+                hover:bg-yellow-200
+                cursor-pointer
+                rounded-lg
+              "
+            >
               <span class="w-8"></span>
               <span>Grossary</span>
             </div>
-            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">
+            <div
+              class="
+                text-yellow-500 text-white
+                font-bold
+                p-2
+                hover:bg-yellow-200
+                cursor-pointer
+                rounded-lg
+              "
+            >
               <span class="w-8"></span>
               <span>Home and Garden </span>
             </div>
-            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg mb-3">
+            <div
+              class="
+                text-yellow-500 text-white
+                font-bold
+                p-2
+                hover:bg-yellow-200
+                cursor-pointer
+                rounded-lg
+                mb-3
+              "
+            >
               <span class="w-8"></span>
               <span>Fashion</span>
             </div>
-            
-        </div>
           </div>
-          
-        
+        </div>
+
         <!-- Search Icon -->
         <div
           class="
@@ -168,7 +262,6 @@
         >
           <!-- Search icon SVG -->
           <svg
-            
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
             fill="none"
@@ -199,24 +292,24 @@
           "
         >
           <!-- Wishlist icon -->
-          <a href="./wishlist.html"><svg
-            class="wishlist h-4 w-4 cursor-pointer"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-            />
-          </svg></a>
+          <a href="./wishlist.html"
+            ><svg
+              class="wishlist h-4 w-4 cursor-pointer"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              /></svg
+          ></a>
           <!-- Cart Icon Div -->
           <div
             class="
-            
               cart-icon
               h-10
               w-10
@@ -228,27 +321,42 @@
               relative
             "
           >
-          <!-- Cart item number Div -->
-          <a href="cart.html"><div class="cart-item-number absolute -top-1 -right-1 h-4 w-4 bg-yellow-500 rounded-full flex items-center justify-center text-white text-xs "></div>
-          
-            <!-- Cart SVG -->
-            <svg
-              class="h-4 w-4"
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-              />
-            </svg>
+            <!-- Cart item number Div -->
+            <a href="cart.html"
+              ><div
+                class="
+                  cart-item-number
+                  absolute
+                  -top-1
+                  -right-1
+                  h-4
+                  w-4
+                  bg-yellow-500
+                  rounded-full
+                  flex
+                  items-center
+                  justify-center
+                  text-white text-xs
+                "
+              ></div>
 
-          </div></a>
+              <!-- Cart SVG -->
+              <svg
+                class="h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                /></svg
+            ></a>
+          </div>
           <!-- Bell Icon SVG-->
           <svg
             class="h-4 w-4"
@@ -265,29 +373,51 @@
               d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
             />
           </svg>
-          <svg class="h-12 w-12 rounded-full border-2 border-white overflow-hidden" data-jdenticon-value="rishikesh"></svg>
+          <svg
+            class="h-12 w-12 rounded-full border-2 border-white overflow-hidden"
+            data-jdenticon-value="rishikesh"
+          ></svg>
         </div>
       </div>
       <!-- Main Section -->
       <div class="main-h-screen flex min-w-screen w-full relative">
-         <!-- Disappearing Message Div -->
-          <div class="message-div get-message w-auto h-12 flex items-center justify-center text-white text-xl bg-green-600 right-2 fixed p-2 rounded-r-lg border-l-8 border-b-2 border-green-900 shadow-2xl z-30  mt-2 hidden">
-            <!-- Text for message goes here -->
-          </div>
-         
-        
+        <!-- Disappearing Message Div -->
+        <div
+          class="
+            message-div
+            get-message
+            w-auto
+            h-12
+            flex
+            items-center
+            justify-center
+            text-white text-xl
+            bg-green-600
+            right-2
+            fixed
+            p-2
+            rounded-r-lg
+            border-l-8 border-b-2 border-green-900
+            shadow-2xl
+            z-30
+            mt-2
+            hidden
+          "
+        >
+          <!-- Text for message goes here -->
+        </div>
+
         <!-- Sidebar Div -->
         <div
           class="
-          sticky
+            sticky
             main-right-sidebar
             border-t border-yellow-500
             w-1/5
             h-vh
             bg-yellow-200
             text-yellow-900
-            p-6 
-           
+            p-6
           "
         >
           <div class="sidebar-categories">
@@ -360,9 +490,21 @@
                 cursor-pointer
               "
             >
-              <span class="w-8"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-              </svg></span>
+              <span class="w-8"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 mt-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                  /></svg
+              ></span>
               <span>Contact Us</span>
             </div>
             <div
@@ -383,9 +525,7 @@
           </div>
         </div>
         <!-- Main shopping div -->
-        <div class="shoping-section main-h-screen flex-1 p-6 bg-gray-100  ">
-         
-          
+        <div class="shoping-section main-h-screen flex-1 p-6 bg-gray-100">
           <div class="main-banner h-44 rounded-lg flex items-end">
             <div
               class="
@@ -402,20 +542,22 @@
                 cursor-pointer
               "
             >
-              <a href="#hot-deals"><h4 class="text-bold">Browse Products</h4></a>
+              <a href="#hot-deals"
+                ><h4 class="text-bold">Browse Products</h4></a
+              >
             </div>
           </div>
           <div class="section-categories mt-10">
             <h1
               class="
-                popular-categories
+                popular-products
                 font-bold
                 text-yellow-900 text-2xl
                 flex
                 items-center
               "
             >
-              Popular Categories
+              Popular Products
               <svg
                 class="h-6 w-6 text-yellow-500 ml-2"
                 xmlns="http://www.w3.org/2000/svg"
@@ -445,17 +587,15 @@
                 "
               >
                 <svg
-                  class="h-12 w-12 text-gray-500"
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+                  class="h-12 w-12 text-gray-500 cursor-pointer"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    fill-rule="evenodd"
+                    d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z"
+                    clip-rule="evenodd"
                   />
                 </svg>
               </div>
@@ -473,20 +613,10 @@
                   mx-2
                 "
               >
-                <svg
-                  class="h-12 w-12 text-gray-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"
-                  />
-                </svg>
+                <i
+                  class="fa fa-laptop text-gray-500 cursor-pointer text-3xl"
+                  aria-hidden="true"
+                ></i>
               </div>
               <div
                 class="
@@ -519,7 +649,7 @@
               </div>
               <div
                 class="
-                  icon-book
+                  tablet
                   h-20
                   w-20
                   flex
@@ -531,20 +661,10 @@
                   mx-2
                 "
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-12 w-12 text-gray-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                  />
-                </svg>
+                <i
+                  class="fa fa-tablet text-gray-500 text-4xl cursor-pointer"
+                  aria-hidden="true"
+                ></i>
               </div>
               <div
                 class="
@@ -673,98 +793,112 @@
           <!-- Search Result Div-->
           <div class="search-result mt-10">
             <h1
-            class="
-              search-result-name
-              font-bold
-              text-yellow-900 text-2xl
-              flex
-              items-center
-              hidden
-            "
-          >
-          Search Results 🔍
-          </h1>
-            <div class="search-items flex flex-wrap">
-              
-            </div>
+              class="
+                search-result-name
+                font-bold
+                text-yellow-900 text-2xl
+                flex
+                items-center
+                hidden
+              "
+            >
+              Search Results 🔍
+            </h1>
+            <div class="search-items flex flex-wrap"></div>
           </div>
           <!-- Main Deals (Hot Deals) -->
           <div id="hot-deals" class="main-deals mt-10">
-            <h1 
-            class="
-              popular-categories
-              font-bold
-              text-yellow-900 text-2xl
-              flex
-              items-center
-            "
-          >
-            Hot Deals 🔥 
-          </h1>
-          <div class="main-section-products flex flex-wrap">
+            <h1
+              class="
+                popular-categories
+                font-bold
+                text-yellow-900 text-2xl
+                flex
+                items-center
+              "
+            >
+              Hot Deals 🔥
+            </h1>
+            <div class="main-section-products flex flex-wrap">
               <!-- Items come here -->
-          </div>
+            </div>
           </div>
           <!-- Iphone Section -->
           <div id="smartphones" class="iphones mt-10">
             <h1
-            class="
-              popular-categories
-              font-bold
-              text-yellow-900 text-2xl
-              flex
-              items-center
-            "
-          >
-            Apple iphones  
-          </h1>
+              class="
+                popular-categories
+                font-bold
+                text-yellow-900 text-2xl
+                flex
+                items-center
+              "
+            >
+              Apple iphones
+            </h1>
             <div class="iphone-section-products flex flex-wrap">
               <!-- iphones come here -->
-          </div>
+            </div>
           </div>
           <!-- Ipad Section -->
           <div class="ipads mt-10">
             <h1
-            id="ipads"
-            class="
-              popular-categories
-              font-bold
-              text-yellow-900 text-2xl
-              flex
-              items-center
-            "
-          >
-            Apple iPads  
-          </h1>
+              id="ipads"
+              class="
+                popular-categories
+                font-bold
+                text-yellow-900 text-2xl
+                flex
+                items-center
+              "
+            >
+              Apple iPads
+            </h1>
             <div class="ipad-section-products flex flex-wrap">
               <!-- ipads come here -->
-          </div>
+            </div>
           </div>
           <!-- Macbook Section -->
           <div class="macbooks mt-10">
             <h1
-            id="laptops"
-            class="
-              popular-categories
-              font-bold
-              text-yellow-900 text-2xl
-              flex
-              items-center
-            "
-          >
-            Apple Macbooks
-          </h1>
+              id="laptops"
+              class="
+                popular-categories
+                font-bold
+                text-yellow-900 text-2xl
+                flex
+                items-center
+              "
+            >
+              Apple Macbooks
+            </h1>
             <div class="macbook-section-products flex flex-wrap">
               <!-- macbooks come here -->
+            </div>
           </div>
+          <!-- PC Section -->
+          <div id="computers" class="macbooks mt-10">
+            <h1
+              class="
+                popular-categories
+                font-bold
+                text-yellow-900 text-2xl
+                flex
+                items-center
+              "
+            >
+              Apple Desktop Computers
+            </h1>
+            <div class="imac-section-products flex flex-wrap">
+              <!-- macbooks come here -->
+            </div>
           </div>
-
         </div>
       </div>
     </div>
-    
+
     <script src="./src/firebase.js"></script>
-    <script  src="./src/script.js"></script>
+    <script src="./src/script.js"></script>
     <script src="./src/header.js"></script>
     <script src="./src/cart.js"></script>
     <script src="./src/index.js"></script>

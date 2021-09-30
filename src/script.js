@@ -4,6 +4,7 @@ const hotDeals = document.querySelector(".main-section-products");
 const iphonesDiv = document.querySelector(".iphone-section-products");
 const ipadDiv = document.querySelector(".ipad-section-products");
 const macbookDiv = document.querySelector(".macbook-section-products");
+const pcDiv = document.querySelector(".imac-section-products");
 
 // For getting search items from database
 function getSearchItems(searchValue) {
@@ -170,56 +171,73 @@ function addToWishlist(item, ele) {
 }
 
 // for getting iphones
-function getIphones(iphonesDiv){
+function getIphones(iphonesDiv) {
   db.collection("iphones").onSnapshot((snapshot) => {
     let items = [];
     snapshot.docs.forEach((doc) => {
-      if(doc.data().type == "iphone"){
+      if (doc.data().type == "iphone") {
         items.push({
           id: doc.id,
           ...doc.data(),
         });
       }
     });
-    generateItems(items,iphonesDiv);
+    generateItems(items, iphonesDiv);
   });
 }
 
 getIphones(iphonesDiv);
 
-
 // for getting ipads
-function getIpads(ipadDiv){
+function getIpads(ipadDiv) {
   db.collection("items").onSnapshot((snapshot) => {
     let items = [];
     snapshot.docs.forEach((doc) => {
-      if(doc.data().type == "ipad"){
+      if (doc.data().type == "ipad") {
         items.push({
           id: doc.id,
           ...doc.data(),
         });
       }
     });
-    generateItems(items,ipadDiv);
+    generateItems(items, ipadDiv);
   });
 }
 
 getIpads(ipadDiv);
 
 // for getting macbooks
-function getMacbooks(macbookDiv){
+function getMacbooks(macbookDiv) {
   db.collection("items").onSnapshot((snapshot) => {
     let items = [];
     snapshot.docs.forEach((doc) => {
-      if(doc.data().type == "macbook"){
+      if (doc.data().type == "macbook") {
         items.push({
           id: doc.id,
           ...doc.data(),
         });
       }
     });
-    generateItems(items,macbookDiv);
+    generateItems(items, macbookDiv);
   });
 }
 
 getMacbooks(macbookDiv);
+
+// for getting macbooks
+function getPcComputers(pcDiv) {
+  db.collection("items").onSnapshot((snapshot) => {
+    let items = [];
+    snapshot.docs.forEach((doc) => {
+      if (doc.data().type == "mac-pro" || doc.data().type == "imac" || doc.data().type == "mac-mini") {
+        items.push({
+          id: doc.id,
+          ...doc.data(),
+        });
+      }
+    });
+    generateItems(items, pcDiv);
+  });
+}
+
+getPcComputers(pcDiv);
