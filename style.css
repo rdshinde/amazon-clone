@@ -87,7 +87,7 @@ body {
 .loader-p:before,
 .loader-p:after {
   content: "";
-  border: 1em solid #e38a15;
+  border: 1em solid #191817;
   border-radius: 50%;
   width: inherit;
   height: inherit;
