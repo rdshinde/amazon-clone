@@ -4,14 +4,12 @@ const messageDiv = document.querySelector(".message-div");
 const dropDownList = document.querySelector(".category-dropdown");
 const overlayDiv = document.querySelector(".overlay");
 
-// function onloadHandler() {
-//   preloaderHandler();
-// }
+function onloadHandler() {
+  preloaderHandler();
+}
 // window.onload = onloadHandler;
 
-document.addEventListener('DOMContentLoaded', function(){
-  preloaderHandler();
-});
+
 
 dropdownArrow.addEventListener("click", function () {
   if (dropDownList.classList.contains("hidden")) {
@@ -35,7 +33,10 @@ overlayDiv.addEventListener("click", function () {
 
 function addMessage(msg) {
   messageDiv.innerText = msg;
-  messageDiv.classList.remove("hidden");
+  setTimeout(function(){
+    messageDiv.classList.remove("hidden");
+  },1300)
+  
 }
 
 function removeMessage(msg) {
