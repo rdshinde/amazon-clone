@@ -4,10 +4,14 @@ const messageDiv = document.querySelector(".message-div");
 const dropDownList = document.querySelector(".category-dropdown");
 const overlayDiv = document.querySelector(".overlay");
 
-function onloadHandler() {
+// function onloadHandler() {
+//   preloaderHandler();
+// }
+// window.onload = onloadHandler;
+
+document.addEventListener('DOMContentLoaded', function(){
   preloaderHandler();
-}
-window.onload = onloadHandler;
+});
 
 dropdownArrow.addEventListener("click", function () {
   if (dropDownList.classList.contains("hidden")) {
