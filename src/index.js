@@ -6,9 +6,6 @@ const overlayDiv = document.querySelector(".overlay");
 
 function onloadHandler() {
   preloaderHandler()
-  dropDownList.classList.add("hidden");
-  overlayDiv.classList.add("hidden");
-  preloaderHandler()
 }
 window.onload = onloadHandler;
 
