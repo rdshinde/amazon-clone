@@ -13,7 +13,7 @@ function getSearchItems(searchValue) {
     snapshot.docs.forEach((doc) => {
       if (
         doc.data().name.toLowerCase().includes(searchValue.toLowerCase()) ||
-        doc.data().make.toLowerCase().includes(searchValue.toLowerCase())
+        doc.data().type.toLowerCase().includes(searchValue.toLowerCase())
       ) {
         searchItems.push({
           id: doc.id,
@@ -22,6 +22,7 @@ function getSearchItems(searchValue) {
         searchItemsDiv.innerHTML = "";
         generateItems(searchItems, searchItemsDiv);
       }
+      
     });
   });
 }
