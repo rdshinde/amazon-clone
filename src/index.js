@@ -67,3 +67,7 @@ function preloaderHandler() {
   addPreloader();
   removePreloader();
 }
+
+document.querySelector(".browse-button").addEventListener("click",function(){
+  document.querySelector(".search-item").focus();
+})

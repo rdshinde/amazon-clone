@@ -74,7 +74,7 @@ function generateItems(items, divname) {
     let doc = document.createElement("div");
     doc.classList.add("main-product", "m-5", "relative");
     doc.innerHTML = `
-    <div class="product-image w-48 h-52 bg-white rounded-xl p-4">
+    <div class="product-image w-48 h-52 bg-white rounded-xl shadow-2xl p-4">
                       <!-- image -->
                       <img class="display-img w-full h-full p-2 object-contain" src="${item.image}" alt="">
                   </div>

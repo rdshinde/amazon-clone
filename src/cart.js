@@ -135,10 +135,11 @@ function generateCartItems(cartItems){
                   text-gray-300
                   cursor-pointer
                   hover:text-gray-400
+                 
                 "
               >
                 <!-- delete item -->
-                <i class="fa fa-times" aria-hidden="true"></i>
+                <i class="fa fa-times " aria-hidden="true"></i>
               </div>
             </div>`
         
