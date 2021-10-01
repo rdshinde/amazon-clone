@@ -51,14 +51,14 @@
  
    </div>
       <!-- Header Div -->
-      <div class="header h-16 bg-yellow-200 flex items-center sticky top-0 z-50 min-w-screen">
+      <div class="header h-16 bg-gray-800 flex items-center sticky top-0 z-50">
         <!-- Logo Div -->
         <div class="logo w-1/5 h-16 ml-10 pt-1">
           <a href="index.html">
             <!-- Logo Image -->
             <img
               class="w-28 h-16 object-contain"
-              src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+              src="https://i0.wp.com/zeevector.com/wp-content/uploads/LOGO/Amazon-India-Logo-PNG-White2.png?resize=561%2C160&ssl=1"
               alt=""
             />
           </a>
@@ -69,15 +69,15 @@
             search-item
             h-9
             w-30
-            bg-yellow-100
-            border border-yellow-500
+            bg-gray-100
+            border border-gray-500
             px-3
             focus:outline-none
-            text-yellow-800
+            text-gray-900
             ml-6
             border-opacity-75
             rounded-l-xl
-            placeholder-yellow-600
+            placeholder-gray-600
           "
           type="text"
           id="search"
@@ -85,27 +85,36 @@
         />
         <!-- Categories Search -->
         <div
-        
           class="
             relative
             categories
             h-9
             w-30
-            bg-yellow-100
-            border border-yellow-500
+            bg-gray-100
+            border border-gray-500
             flex
             items-center
             border-opacity-75
             px-3
-            text-yellow-600
+            text-gray-600
           "
         >
-        <button class="overlay fixed inset-0 h-full w-full  cursor-default bg-gray-50 bg-opacity-25 hidden"></button>
-          Categories
+          <!-- Overlay Button -->
+          <button
+            class="overlay fixed inset-0 h-full w-full cursor-default hidden"
+          ></button>
+          Products
           <!-- Categories downword arraow icon SVG-->
           <svg
-          
-            class="category-dropdown-arrow h-4 w-4 ml-2 cursor-pointer relative z-10 "
+            class="
+              category-dropdown-arrow
+              h-4
+              w-4
+              ml-2
+              cursor-pointer
+              relative
+              z-10
+            "
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
             fill="none"
@@ -118,51 +127,129 @@
               stroke-width="2"
               d="M19 9l-7 7-7-7"
             />
-            
           </svg>
-          
-          <div tabindex="-1" class="category-dropdown absolute shadow-2xl  p-2 -mt-3 -ml-3 top-12 w-30 h-100 justify-center bg-yellow-100 rounded-br-xl rounded-bl-xl border-yellow-500 hidden
-          ">
-          
-            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">
+
+          <div
+            tabindex="-1"
+            class="
+              category-dropdown
+              absolute
+              shadow-2xl
+              p-2
+              -mt-3
+              -ml-3
+              top-12
+              w-30
+              h-100
+              justify-center
+              bg-gray-100
+              rounded-br-xl rounded-bl-xl
+              border-gray-500
+              hidden
+            "
+          >
+            <div
+              class="
+                text-gray-500
+                font-bold
+                p-2
+                hover:bg-gray-200
+                cursor-pointer
+                rounded-lg
+              "
+            >
               <span class="w-8"></span>
-              <span>Echo and Alexa</span>
+              <span>iPhones</span>
             </div>
-            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">
+            <div
+              class="
+                text-gray-500
+                font-bold
+                p-2
+                hover:bg-gray-200
+                cursor-pointer
+                rounded-lg
+              "
+            >
               <span class="w-8"></span>
-              <span>Kindle</span>
+              <span>iPads</span>
             </div>
-            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">
+            <div
+              class="
+                text-gray-500
+                font-bold
+                p-2
+                hover:bg-gray-200
+                cursor-pointer
+                rounded-lg
+              "
+            >
               <span class="w-8"></span>
-              <span>Electronics</span>
+              <span>Macbooks</span>
             </div>
-            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">
+            <div
+              class="
+                text-gray-500
+                font-bold
+                p-2
+                hover:bg-gray-200
+                cursor-pointer
+                rounded-lg
+              "
+            >
               <span class="w-8"></span>
-              <span>Books</span>
+              <span>iMac</span>
             </div>
-            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">
+            <div
+              class="
+                text-gray-500
+                font-bold
+                p-2
+                hover:bg-gray-200
+                cursor-pointer
+                rounded-lg
+              "
+            >
               <span class="w-8"></span>
-              <span>Grossary</span>
+              <span>Mac mini</span>
             </div>
-            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg">
+            <div
+              class="
+                text-gray-500
+                font-bold
+                p-2
+                hover:bg-gray-200
+                cursor-pointer
+                rounded-lg
+              "
+            >
               <span class="w-8"></span>
-              <span>Home and Garden </span>
+              <span>Smartwatch</span>
             </div>
-            <div class="text-yellow-500 text-white font-bold p-2 hover:bg-yellow-200 cursor-pointer rounded-lg mb-3">
+            <div
+              class="
+                text-gray-500
+                font-bold
+                p-2
+                hover:bg-gray-200
+                cursor-pointer
+                rounded-lg
+                mb-3
+              "
+            >
               <span class="w-8"></span>
-              <span>Fashion</span>
+              <span>Accessories</span>
             </div>
-            
-        </div>
           </div>
-          
-        
+        </div>
+
         <!-- Search Icon -->
         <div
           class="
             search-icon
             cursor-pointer
             bg-yellow-500
+            border-gray-500
             h-9
             w-10
             rounded-r-xl
@@ -174,7 +261,6 @@
         >
           <!-- Search icon SVG -->
           <svg
-            
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
             fill="none"
@@ -193,7 +279,7 @@
           class="
             cursor-pointer
             icons
-            text-yellow-600
+            text-white
             flex
             items-center
             justify-center
@@ -205,43 +291,10 @@
           "
         >
           <!-- Wishlist icon -->
-          <a href="./wishlist.html"><svg
-            class="wishlist h-4 w-4 cursor-pointer"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-            />
-          </svg></a>
-          <!-- Cart Icon Div -->
-          <div
-            class="
-            
-              cart-icon
-              h-10
-              w-10
-              bg-yellow-100
-              flex
-              items-center
-              justify-center
-              rounded-xl
-              relative
-            "
-          >
-          <!-- Cart item number Div -->
-          <a href="cart.html"><div class="cart-item-number absolute -top-1 -right-1 h-4 w-4 bg-yellow-500 rounded-full flex items-center justify-center text-white text-xs "></div>
-          
-            <!-- Cart SVG -->
-            <svg
-              class="h-4 w-4"
+          <a href="./wishlist.html"
+            ><svg
+              class="wishlist h-4 w-4 cursor-pointer"
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -250,9 +303,58 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-              />
-            </svg></a>
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              /></svg
+          ></a>
+          <!-- Cart Icon Div -->
+          <div
+            class="
+              cart-icon
+              h-10
+              w-10
+              bg-yellow-500
+              flex
+              items-center
+              justify-center
+              rounded-xl
+              relative
+            "
+          >
+            <!-- Cart item number Div -->
+            <a href="cart.html"
+              ><div
+                class="
+                  cart-item-number
+                  absolute
+                  -top-1
+                  -right-1
+                  h-4
+                  w-4
+                  bg-gray-500
+                  rounded-full
+                  flex
+                  items-center
+                  justify-center
+                  text-white text-xs
+                "
+              ></div>
+
+              <!-- Cart SVG -->
+              <svg
+                class="h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                /></svg
+            ></a>
           </div>
           <!-- Bell Icon SVG-->
           <svg
@@ -270,7 +372,10 @@
               d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
             />
           </svg>
-          <svg class="h-12 w-12 rounded-full border-2 border-white overflow-hidden" data-jdenticon-value="rishikesh"></svg>
+          <svg
+            class="h-12 w-12 rounded-full border-2 border-white overflow-hidden"
+            data-jdenticon-value="rishikesh"
+          ></svg>
         </div>
       </div>
       <!-- Main Div -->
@@ -285,100 +390,122 @@
         <div
           class="
             main-right-sidebar
-            border-t border-yellow-500
-            w-1/5
+            border-t border-white
             h-vh
-            bg-yellow-200
-            text-yellow-900
+            bg-gray-800
+            text-white
             p-6
+            w-auto
+            w-1/5
           "
         >
-          <div class="sidebar-categories cursor-pointer">
-            <div
-              class="
-                cursor-pointer
-                flex
-                mb-4
-                p-2
-                bg-yellow-100
-                rounded-xl
-                font-bold
-              "
-            >
-              <span class="w-8">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                  />
-                </svg>
-              </span>
-              <span>Categories</span>
-            </div>
-            <div class="sidebar-subcategories flex text-yellow-500 p-2">
-              <span class="w-8"></span>
-              <span>Echo and Alexa</span>
-            </div>
-            <div class="sidebar-subcategories flex text-yellow-500 p-2">
-              <span class="w-8"></span>
-              <span>Kindle</span>
-            </div>
-            <div class="sidebar-subcategories flex text-yellow-500 p-2">
-              <span class="w-8"></span>
-              <span>Electronics</span>
-            </div>
-            <div class="sidebar-subcategories flex text-yellow-500 p-2">
-              <span class="w-8"></span>
-              <span>Books</span>
-            </div>
-            <div class="sidebar-subcategories flex text-yellow-500 p-2">
-              <span class="w-8"></span>
-              <span>Grossary</span>
-            </div>
-            <div class="sidebar-subcategories flex text-yellow-500 p-2">
-              <span class="w-8"></span>
-              <span>Home and Garden </span>
-            </div>
-            <div class="sidebar-subcategories flex text-yellow-500 p-2 mb-3">
-              <span class="w-8"></span>
-              <span>Fashion</span>
-            </div>
-            <div
-              class="
-                sidebar-subcategories
-                flex
-                text-yellow-500
-                p-2
-                hover:bg-yellow-100
-                rounded-xl
-                font-bold
-              "
-            >
-              <span class="w-8"><i class="fas fa-percentage"></i></span>
-              <span>Sell on Amazon</span>
-            </div>
-            <div
-              class="
-                sidebar-subcategories
-                flex
-                text-yellow-500
-                p-2
-                hover:bg-yellow-100
-                rounded-xl
-                font-bold
-              "
-            >
-              <span class="w-8"><i class="far fa-question-circle"></i> </span>
-              <span>Help</span>
-            </div>
+          <div class="sidebar-categories">
+            <section class="categories-names fixed">
+              <div
+                class="
+                  cursor-pointer
+                  flex
+                  mb-4
+                  p-2
+                  text-gray-600
+                  rounded-xl
+                  font-bold
+                  bg-gray-200
+                  w-auto
+                "
+              >
+                <span class="w-8">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                    />
+                  </svg>
+                </span>
+                <span>Categories</span>
+              </div>
+
+              <div class="sidebar-subcategories flex text-yellow-500 p-2">
+                <span class="w-8"></span>
+                <a href="#hot-deals"><span>Hot Deals</span></a>
+              </div>
+              <div class="sidebar-subcategories flex text-yellow-500 p-2">
+                <span class="w-8"></span>
+                <a href="#laotops"><span>Laptops</span></a>
+              </div>
+              <div class="sidebar-subcategories flex text-yellow-500 p-2">
+                <span class="w-8"></span>
+                <a href="#smartphones"><span>Smartphones</span></a>
+              </div>
+              <div class="sidebar-subcategories flex text-yellow-500 p-2">
+                <span class="w-8"></span>
+                <a href="smartwatch"><span>Smartwatches</span></a>
+              </div>
+              <div class="sidebar-subcategories flex text-yellow-500 p-2">
+                <span class="w-8"></span>
+                <a href="#ipads"><span>Tablets and iPads</span></a>
+              </div>
+              <div class="sidebar-subcategories flex text-yellow-500 p-2">
+                <span class="w-8"></span>
+                <a href="#computers"><span>PC's</span></a>
+              </div>
+              <div class="sidebar-subcategories flex text-yellow-500 p-2 mb-3">
+                <span class="w-8"></span>
+                <a href="#accessories"><span>Accessories</span></a>
+              </div>
+              <div
+                class="
+                  sidebar-subcategories
+                  flex
+                  text-gray-500
+                  p-2
+                  hover:bg-gray-100
+                  rounded-xl
+                  font-bold
+                  cursor-pointer
+                "
+              >
+                <span class="w-8"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 mt-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                    /></svg
+                ></span>
+                <span>Contact Us</span>
+              </div>
+              <div
+                class="
+                  sidebar-subcategories
+                  flex
+                  text-gray-500
+                  p-2
+                  hover:bg-gray-100
+                  rounded-xl
+                  font-bold
+                  cursor-pointer
+                "
+              >
+                <span class="w-8"><i class="far fa-question-circle"></i> </span>
+                <span>Help</span>
+              </div>
+            </section>
           </div>
         </div>
         <!-- Main shopping div -->

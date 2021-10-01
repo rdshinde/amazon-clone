@@ -7,7 +7,7 @@ const overlayDiv = document.querySelector(".overlay");
 function onloadHandler() {
   preloaderHandler();
 }
-window.onload = onloadHandler;
+// window.onload = onloadHandler;
 
 
 
