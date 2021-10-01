@@ -119,7 +119,7 @@ body {
   transition: transform .5s;
 }
 .banner-img:hover{
-  transform: scale(1.6);
+  transform: scale(1.3);
   transition: transform .5s;
 }
 .display-img{

@@ -5,6 +5,8 @@ const iphonesDiv = document.querySelector(".iphone-section-products");
 const ipadDiv = document.querySelector(".ipad-section-products");
 const macbookDiv = document.querySelector(".macbook-section-products");
 const pcDiv = document.querySelector(".imac-section-products");
+const watchDiv = document.querySelector(".watch-section-products");
+const accessoriesDiv = document.querySelector(".accessories-section-products");
 
 const productsList = document.querySelectorAll(".products-list");
 const productsDiv = document.querySelector(".product-span");
@@ -244,7 +246,7 @@ function getMacbooks(macbookDiv) {
 
 getMacbooks(macbookDiv);
 
-// for getting macbooks
+// for getting pc's
 function getPcComputers(pcDiv) {
   db.collection("items").onSnapshot((snapshot) => {
     let items = [];
@@ -265,3 +267,40 @@ function getPcComputers(pcDiv) {
 }
 
 getPcComputers(pcDiv);
+
+// for getting watches
+function getSmartwatches(watchDiv) {
+  db.collection("items").onSnapshot((snapshot) => {
+    let items = [];
+    snapshot.docs.forEach((doc) => {
+      if (doc.data().type == "smartwatch") {
+        items.push({
+          id: doc.id,
+          ...doc.data(),
+        });
+      }
+    });
+    generateItems(items, watchDiv);
+  });
+}
+
+getSmartwatches(watchDiv);
+
+// for getting macbooks
+function getAccessories(accessoriesDiv) {
+  db.collection("items").onSnapshot((snapshot) => {
+    let items = [];
+    snapshot.docs.forEach((doc) => {
+      if (doc.data().type == "accessories ") {
+        items.push({
+          id: doc.id,
+          ...doc.data(),
+        });
+      }
+    });
+    generateItems(items, accessoriesDiv);
+  });
+}
+
+getAccessories(accessoriesDiv);
+// console.log(accessoriesDiv)
