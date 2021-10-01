@@ -41,26 +41,34 @@
   </head>
 
   <body class="unselectable">
-    
     <!-- Whole body container -->
     <div class="bg-white w-full min-w-screen">
       <!-- preloader -->
       <div class="preloader hidden loader-bg">
-       <div class="loader-p">
-       </div>
- 
-   </div>
+        <div class="loader-p"></div>
+      </div>
       <!-- Header Div -->
       <div class="header h-16 bg-gray-800 flex items-center sticky top-0 z-50">
         <!-- Logo Div -->
-        <div class="logo w-1/5 h-16 ml-10 pt-1">
-          <a href="index.html">
+        <div class="logo w-1/5 h-16 pt-2">
+          <a
+            class="
+              flex
+              items-center
+              justify-center
+              text-3xl
+              font-bold
+              text-gray-300
+              w-52
+            "
+            href="index.html"
+          >
             <!-- Logo Image -->
             <img
-              class="w-28 h-16 object-contain"
-              src="https://i0.wp.com/zeevector.com/wp-content/uploads/LOGO/Amazon-India-Logo-PNG-White2.png?resize=561%2C160&ssl=1"
+              class="w-16 h-12 object-contain"
+              src="https://png2.cleanpng.com/sh/077213725827e91d1c34431b1b37107e/L0KzQYi4UsE5N2E9SJGAYUO6dYO4UvQ6OGVmUJCAMEm0QYi3UcE2OWQ7SaMCOUS7SImCTwBvbz==/5a37e212d904a8.5091170115136117948889.png"
               alt=""
-            />
+            /><span>Store</span>
           </a>
         </div>
         <!-- Input Search -->
@@ -248,8 +256,8 @@
           class="
             search-icon
             cursor-pointer
-            bg-yellow-500
-            border-gray-500
+            bg-gray-100
+            border border-gray-500 border-opacity-75
             h-9
             w-10
             rounded-r-xl
@@ -262,7 +270,7 @@
           <!-- Search icon SVG -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
+            class="h-6 w-6 text-gray-600 cursor-pointer"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -312,7 +320,7 @@
               cart-icon
               h-10
               w-10
-              bg-yellow-500
+              bg-gray-500
               flex
               items-center
               justify-center
@@ -330,12 +338,12 @@
                   -right-1
                   h-4
                   w-4
-                  bg-gray-500
+                  bg-gray-100
                   rounded-full
                   flex
                   items-center
                   justify-center
-                  text-white text-xs
+                  text-gray-600 text-xs
                 "
               ></div>
 
@@ -380,12 +388,32 @@
       </div>
       <!-- Main Div -->
       <div class="main h-screen flex min-h-screen min-w-screen relative">
-        
         <!-- Disappearing Message Div -->
-        <div class="message-div get-message w-auto h-12 flex items-center justify-center text-white text-xl bg-green-600 right-2 fixed p-2 rounded-r-lg border-l-8 border-b-2 border-green-900 shadow-2xl z-30  mt-2 hidden">
+        <div
+          class="
+            message-div
+            get-message
+            w-auto
+            h-12
+            flex
+            items-center
+            justify-center
+            text-white text-xl
+            bg-green-600
+            right-2
+            fixed
+            p-2
+            rounded-r-lg
+            border-l-8 border-b-2 border-green-900
+            shadow-2xl
+            z-30
+            mt-2
+            hidden
+          "
+        >
           <!-- Text for message goes here -->
         </div>
-       
+
         <!-- Sidebar Div -->
         <div
           class="
@@ -395,8 +423,7 @@
             bg-gray-800
             text-white
             p-6
-            w-auto
-            w-1/5
+            w-auto w-1/5
           "
         >
           <div class="sidebar-categories">
@@ -512,11 +539,53 @@
 
         <div class="shoping-section flex-1 p-6 bg-white relative">
           <!-- back to home  -->
-          <div class="back-to-home bg-yellow-100 w-full h-10 border-t-2 z-10 border-yellow-500 absolute inset-0 flex justify-start items-center"><a class="flex justify-start text-sm ml-2 text-yellow-600 hover:text-yellow-700 items-center " href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>Back to home</a></div>
+          <div
+            class="
+              back-to-home
+              bg-gray-100
+              w-full
+              h-10
+              border-t-2
+              z-10
+              border-white
+              absolute
+              inset-0
+              flex
+              justify-start
+              items-center
+            "
+          >
+            <a
+              class="
+                flex
+                justify-start
+                text-sm
+                ml-2
+                text-yellow-600
+                hover:text-yellow-700
+                items-center
+              "
+              href="./index.html"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 mr-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                /></svg
+              >Back to home</a
+            >
+          </div>
           <!-- Shopping Cart Heading -->
-          <h1 class="font-bold text-gray-400 text-3xl mt-10 mb-6">Shopping Cart</h1>
+          <h1 class="font-bold text-gray-400 text-3xl mt-10 mb-6">
+            Shopping Cart
+          </h1>
           <div class="table-titles flex font-bold text-gray-400">
             <h2 class="flex-grow">Products</h2>
             <h2 class="w-48">Count</h2>
@@ -524,7 +593,7 @@
             <span class="w-10"></span>
           </div>
           <!-- Cart Items one -->
-          
+
           <!-- Cart Items two -->
           <div class="cart-items">
             <!-- Cart items goes here -->
@@ -532,9 +601,9 @@
           <div class="complete-order flex justify-end mt-10">
             <div class="total-cost mr-7">
               <h2 class="text-gray-400">Total Cost</h2>
-              <div class="total-cost-number text-gray-600 text-3xl font-bold">
-                
-              </div>
+              <div
+                class="total-cost-number text-gray-600 text-3xl font-bold"
+              ></div>
             </div>
             <div
               class="
@@ -556,30 +625,25 @@
           </div>
           <div class="searched-items flex flex-wrap mt-20 ml-5">
             <!-- Search Result Div-->
-        <div class="search-result mt-5">
-          <h1
-          class="
-            search-result-name
-            font-bold
-            text-yellow-900 text-2xl
-            flex
-            items-center
-            hidden
-          "
-        >
-        Search Results 🔍
-        </h1>
-          <div class="search-items flex flex-wrap mt-5">
-            
+            <div class="search-result mt-5">
+              <h1
+                class="
+                  search-result-name
+                  font-bold
+                  text-yellow-900 text-2xl
+                  flex
+                  items-center
+                  hidden
+                "
+              >
+                Search Results 🔍
+              </h1>
+              <div class="search-items flex flex-wrap mt-5"></div>
+            </div>
           </div>
         </div>
-        </div>
-        </div>
-        
       </div>
-      
     </div>
-    
 
     <script src="./src/index.js"></script>
     <script src="./src/script.js"></script>

@@ -6,6 +6,9 @@ const ipadDiv = document.querySelector(".ipad-section-products");
 const macbookDiv = document.querySelector(".macbook-section-products");
 const pcDiv = document.querySelector(".imac-section-products");
 
+const productsList = document.querySelectorAll(".products-list");
+const productsDiv = document.querySelector(".product-span");
+
 // For getting search items from database
 function getSearchItems(searchValue) {
   db.collection("items").onSnapshot((snapshot) => {
@@ -13,6 +16,7 @@ function getSearchItems(searchValue) {
     snapshot.docs.forEach((doc) => {
       if (
         doc.data().name.toLowerCase().includes(searchValue.toLowerCase()) ||
+        doc.data().make.toLowerCase().includes(searchValue.toLowerCase()) ||
         doc.data().type.toLowerCase().includes(searchValue.toLowerCase())
       ) {
         searchItems.push({
@@ -22,7 +26,6 @@ function getSearchItems(searchValue) {
         searchItemsDiv.innerHTML = "";
         generateItems(searchItems, searchItemsDiv);
       }
-      
     });
   });
 }
@@ -34,6 +37,22 @@ searchInput.addEventListener("change", (event) => {
   messageHandler(`Search result for "${searchValue}" is ready!`);
   getSearchItems(searchValue);
 });
+
+// for product search
+[].forEach.call(productsList, function (div) {
+  div.addEventListener("click", function () {
+    let search = div.innerText;
+    dropDownList.classList.add("hidden");
+    overlayDiv.classList.add("hidden");
+
+    setTimeout(function () {
+      document.querySelector(".search-result-name").classList.remove("hidden");
+      productsDiv.innerText = search;
+      getSearchItems(search);
+    }, 1200);
+  });
+});
+
 // Function To get Items in Hot Deals
 function getItems(divname) {
   db.collection("hot-deals").onSnapshot((snapshot) => {
@@ -230,7 +249,11 @@ function getPcComputers(pcDiv) {
   db.collection("items").onSnapshot((snapshot) => {
     let items = [];
     snapshot.docs.forEach((doc) => {
-      if (doc.data().type == "mac-pro" || doc.data().type == "imac" || doc.data().type == "mac-mini") {
+      if (
+        doc.data().type == "mac-pro" ||
+        doc.data().type == "imac" ||
+        doc.data().type == "mac-mini"
+      ) {
         items.push({
           id: doc.id,
           ...doc.data(),

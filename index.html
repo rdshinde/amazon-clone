@@ -43,16 +43,39 @@
         <div class="loader-p"></div>
       </div>
       <!-- Header Div -->
-      <div class="header h-16 bg-gray-800 flex items-center sticky top-0 z-50">
+      <div
+        class="
+          header
+          h-16
+          bg-gray-800
+          flex
+          items-center
+          sticky
+          top-0
+          z-50
+          border-b-2 border-white
+        "
+      >
         <!-- Logo Div -->
-        <div class="logo w-1/5 h-16 ml-10 pt-1">
-          <a href="index.html">
+        <div class="logo w-1/5 h-16 pt-2">
+          <a
+            class="
+              flex
+              items-center
+              justify-center
+              text-3xl
+              font-bold
+              text-gray-300
+              w-52
+            "
+            href="index.html"
+          >
             <!-- Logo Image -->
             <img
-              class="w-28 h-16 object-contain"
-              src="https://i0.wp.com/zeevector.com/wp-content/uploads/LOGO/Amazon-India-Logo-PNG-White2.png?resize=561%2C160&ssl=1"
+              class="w-16 h-12 object-contain"
+              src="https://png2.cleanpng.com/sh/077213725827e91d1c34431b1b37107e/L0KzQYi4UsE5N2E9SJGAYUO6dYO4UvQ6OGVmUJCAMEm0QYi3UcE2OWQ7SaMCOUS7SImCTwBvbz==/5a37e212d904a8.5091170115136117948889.png"
               alt=""
-            />
+            /><span>Store</span>
           </a>
         </div>
         <!-- Input Search -->
@@ -95,7 +118,7 @@
           <button
             class="overlay fixed inset-0 h-full w-full cursor-default hidden"
           ></button>
-          Products
+          <span class="product-span"> Products</span>
           <!-- Categories downword arraow icon SVG-->
           <svg
             class="
@@ -140,8 +163,8 @@
               hidden
             "
           >
-            <div
-              class="
+            <div value="iphone"
+              class="products-list
                 text-gray-500
                 font-bold
                 p-2
@@ -151,10 +174,10 @@
               "
             >
               <span class="w-8"></span>
-              <span>iPhones</span>
+              <span>iPhone</span>
             </div>
-            <div
-              class="
+            <div value="ipad"
+              class="products-list
                 text-gray-500
                 font-bold
                 p-2
@@ -164,10 +187,10 @@
               "
             >
               <span class="w-8"></span>
-              <span>iPads</span>
+              <span>iPad</span>
             </div>
-            <div
-              class="
+            <div value="macbook"
+              class="products-list
                 text-gray-500
                 font-bold
                 p-2
@@ -177,10 +200,10 @@
               "
             >
               <span class="w-8"></span>
-              <span>Macbooks</span>
+              <span>Macbook</span>
             </div>
-            <div
-              class="
+            <div value="imac"
+              class="products-list
                 text-gray-500
                 font-bold
                 p-2
@@ -192,8 +215,8 @@
               <span class="w-8"></span>
               <span>iMac</span>
             </div>
-            <div
-              class="
+            <div value="mac-mini"
+              class="products-list
                 text-gray-500
                 font-bold
                 p-2
@@ -205,8 +228,8 @@
               <span class="w-8"></span>
               <span>Mac mini</span>
             </div>
-            <div
-              class="
+            <div value="watch"
+              class="products-list
                 text-gray-500
                 font-bold
                 p-2
@@ -218,8 +241,8 @@
               <span class="w-8"></span>
               <span>Smartwatch</span>
             </div>
-            <div
-              class="
+            <div value="accessories"
+              class="products-list
                 text-gray-500
                 font-bold
                 p-2
@@ -240,8 +263,8 @@
           class="
             search-icon
             cursor-pointer
-            bg-yellow-500
-            border-gray-500
+            bg-gray-100
+            border border-gray-500 border-opacity-75
             h-9
             w-10
             rounded-r-xl
@@ -254,7 +277,7 @@
           <!-- Search icon SVG -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
+            class="h-6 w-6 text-gray-600 cursor-pointer"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -304,7 +327,7 @@
               cart-icon
               h-10
               w-10
-              bg-yellow-500
+              bg-gray-500
               flex
               items-center
               justify-center
@@ -322,12 +345,12 @@
                   -right-1
                   h-4
                   w-4
-                  bg-gray-500
+                  bg-gray-100
                   rounded-full
                   flex
                   items-center
                   justify-center
-                  text-white text-xs
+                  text-gray-600 text-xs
                 "
               ></div>
 
@@ -402,7 +425,6 @@
         <div
           class="
             main-right-sidebar
-            border-t border-white
             w-1/5
             h-vh
             bg-gray-800
@@ -445,31 +467,31 @@
                 <span>Categories</span>
               </div>
 
-              <div class="sidebar-subcategories flex text-yellow-500 p-2">
+              <div class="sidebar-subcategories flex text-white hover:text-gray-600 p-2">
                 <span class="w-8"></span>
                 <a href="#hot-deals"><span>Hot Deals</span></a>
               </div>
-              <div class="sidebar-subcategories flex text-yellow-500 p-2">
+              <div class="sidebar-subcategories flex text-white hover:text-gray-600 p-2">
                 <span class="w-8"></span>
                 <a href="#laotops"><span>Laptops</span></a>
               </div>
-              <div class="sidebar-subcategories flex text-yellow-500 p-2">
+              <div class="sidebar-subcategories flex text-white hover:text-gray-600 p-2">
                 <span class="w-8"></span>
                 <a href="#smartphones"><span>Smartphones</span></a>
               </div>
-              <div class="sidebar-subcategories flex text-yellow-500 p-2">
+              <div class="sidebar-subcategories flex text-white hover:text-gray-600 p-2">
                 <span class="w-8"></span>
                 <a href="smartwatch"><span>Smartwatches</span></a>
               </div>
-              <div class="sidebar-subcategories flex text-yellow-500 p-2">
+              <div class="sidebar-subcategories flex text-white hover:text-gray-600 p-2">
                 <span class="w-8"></span>
                 <a href="#ipads"><span>Tablets and iPads</span></a>
               </div>
-              <div class="sidebar-subcategories flex text-yellow-500 p-2">
+              <div class="sidebar-subcategories flex text-white hover:text-gray-600 p-2">
                 <span class="w-8"></span>
                 <a href="#computers"><span>PC's</span></a>
               </div>
-              <div class="sidebar-subcategories flex text-yellow-500 p-2 mb-3">
+              <div class="sidebar-subcategories flex text-white hover:text-gray-600 p-2 mb-3">
                 <span class="w-8"></span>
                 <a href="#accessories"><span>Accessories</span></a>
               </div>
