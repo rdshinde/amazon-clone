@@ -76,7 +76,7 @@ function generateItems(items, divname) {
     doc.innerHTML = `
     <div class="product-image w-48 h-52 bg-white rounded-xl p-4">
                       <!-- image -->
-                      <img class="w-full h-full p-2 object-contain" src="${item.image}" alt="">
+                      <img class="display-img w-full h-full p-2 object-contain" src="${item.image}" alt="">
                   </div>
                   <div class="product-name text-gray-700 font-bold text-sm mt-2">
                     ${item.name}

@@ -115,3 +115,17 @@ body {
     opacity: 0;
   }
 }
+.banner-img{
+  transition: transform .5s;
+}
+.banner-img:hover{
+  transform: scale(1.6);
+  transition: transform .5s;
+}
+.display-img{
+  transition: transform .5s;
+}
+.display-img:hover{
+  transform: scale(1.2);
+  transition: transform .5s;
+}
