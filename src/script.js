@@ -304,3 +304,8 @@ function getAccessories(accessoriesDiv) {
 
 getAccessories(accessoriesDiv);
 // console.log(accessoriesDiv)
+
+
+document.querySelector(".complete-order-button").addEventListener("click",function(){
+  messageHandler(`This feature is not available yet!`);
+})

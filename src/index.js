@@ -35,7 +35,7 @@ function addMessage(msg) {
   messageDiv.innerText = msg;
   setTimeout(function(){
     messageDiv.classList.remove("hidden");
-  },1300)
+  },1000)
   
 }
 
@@ -71,3 +71,4 @@ function preloaderHandler() {
 document.querySelector(".browse-button").addEventListener("click",function(){
   document.querySelector(".search-item").focus();
 })
+
