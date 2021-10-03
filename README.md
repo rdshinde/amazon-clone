@@ -1,2 +1,2 @@
-# amazon-clone
-Creating Amazon clone with javascript and firebase.
+# apple-store
+Creating online store with javascript and firebase.
